@@ -58,6 +58,11 @@ class DirectedGraph(object):
         with open(fileName, "r") as graph:
             line = graph.readline().split()
             self.__vertices = int(line[0])
+
+            for i in range(0, self.__vertices):
+                self.graphOut[i] = []
+                self.graphIn[i] = []
+
             self.__edges = int(line[1])
 
             for i in range(0, self.__vertices):
@@ -151,6 +156,12 @@ class DirectedGraph(object):
         plt.draw()
         plt.show()
 
+    def isolatedNodes(self):
+        isolated = []
+        for el in range(self.vertices):
+            if self.graphIn[el] == [] and self.graphOut[el] == []:
+                isolated.append(el)
+        return isolated
 
 class Edge(object):
 

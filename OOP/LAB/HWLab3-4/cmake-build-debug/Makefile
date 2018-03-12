@@ -123,86 +123,59 @@ HWLab3_4/fast:
 	$(MAKE) -f CMakeFiles/HWLab3_4.dir/build.make CMakeFiles/HWLab3_4.dir/build
 .PHONY : HWLab3_4/fast
 
-domain/console.o: domain/console.cpp.o
-
-.PHONY : domain/console.o
-
-# target to build an object file
-domain/console.cpp.o:
-	$(MAKE) -f CMakeFiles/HWLab3_4.dir/build.make CMakeFiles/HWLab3_4.dir/domain/console.cpp.o
-.PHONY : domain/console.cpp.o
-
-domain/console.i: domain/console.cpp.i
-
-.PHONY : domain/console.i
-
-# target to preprocess a source file
-domain/console.cpp.i:
-	$(MAKE) -f CMakeFiles/HWLab3_4.dir/build.make CMakeFiles/HWLab3_4.dir/domain/console.cpp.i
-.PHONY : domain/console.cpp.i
-
-domain/console.s: domain/console.cpp.s
-
-.PHONY : domain/console.s
-
-# target to generate assembly for a file
-domain/console.cpp.s:
-	$(MAKE) -f CMakeFiles/HWLab3_4.dir/build.make CMakeFiles/HWLab3_4.dir/domain/console.cpp.s
-.PHONY : domain/console.cpp.s
-
-domain/entities/city.o: domain/entities/city.cpp.o
-
-.PHONY : domain/entities/city.o
-
-# target to build an object file
-domain/entities/city.cpp.o:
-	$(MAKE) -f CMakeFiles/HWLab3_4.dir/build.make CMakeFiles/HWLab3_4.dir/domain/entities/city.cpp.o
-.PHONY : domain/entities/city.cpp.o
-
-domain/entities/city.i: domain/entities/city.cpp.i
-
-.PHONY : domain/entities/city.i
-
-# target to preprocess a source file
-domain/entities/city.cpp.i:
-	$(MAKE) -f CMakeFiles/HWLab3_4.dir/build.make CMakeFiles/HWLab3_4.dir/domain/entities/city.cpp.i
-.PHONY : domain/entities/city.cpp.i
-
-domain/entities/city.s: domain/entities/city.cpp.s
-
-.PHONY : domain/entities/city.s
-
-# target to generate assembly for a file
-domain/entities/city.cpp.s:
-	$(MAKE) -f CMakeFiles/HWLab3_4.dir/build.make CMakeFiles/HWLab3_4.dir/domain/entities/city.cpp.s
-.PHONY : domain/entities/city.cpp.s
-
-main.o: main.cpp.o
+main.o: main.c.o
 
 .PHONY : main.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) -f CMakeFiles/HWLab3_4.dir/build.make CMakeFiles/HWLab3_4.dir/main.cpp.o
-.PHONY : main.cpp.o
+main.c.o:
+	$(MAKE) -f CMakeFiles/HWLab3_4.dir/build.make CMakeFiles/HWLab3_4.dir/main.c.o
+.PHONY : main.c.o
 
-main.i: main.cpp.i
+main.i: main.c.i
 
 .PHONY : main.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles/HWLab3_4.dir/build.make CMakeFiles/HWLab3_4.dir/main.cpp.i
-.PHONY : main.cpp.i
+main.c.i:
+	$(MAKE) -f CMakeFiles/HWLab3_4.dir/build.make CMakeFiles/HWLab3_4.dir/main.c.i
+.PHONY : main.c.i
 
-main.s: main.cpp.s
+main.s: main.c.s
 
 .PHONY : main.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles/HWLab3_4.dir/build.make CMakeFiles/HWLab3_4.dir/main.cpp.s
-.PHONY : main.cpp.s
+main.c.s:
+	$(MAKE) -f CMakeFiles/HWLab3_4.dir/build.make CMakeFiles/HWLab3_4.dir/main.c.s
+.PHONY : main.c.s
+
+ui/console.o: ui/console.c.o
+
+.PHONY : ui/console.o
+
+# target to build an object file
+ui/console.c.o:
+	$(MAKE) -f CMakeFiles/HWLab3_4.dir/build.make CMakeFiles/HWLab3_4.dir/ui/console.c.o
+.PHONY : ui/console.c.o
+
+ui/console.i: ui/console.c.i
+
+.PHONY : ui/console.i
+
+# target to preprocess a source file
+ui/console.c.i:
+	$(MAKE) -f CMakeFiles/HWLab3_4.dir/build.make CMakeFiles/HWLab3_4.dir/ui/console.c.i
+.PHONY : ui/console.c.i
+
+ui/console.s: ui/console.c.s
+
+.PHONY : ui/console.s
+
+# target to generate assembly for a file
+ui/console.c.s:
+	$(MAKE) -f CMakeFiles/HWLab3_4.dir/build.make CMakeFiles/HWLab3_4.dir/ui/console.c.s
+.PHONY : ui/console.c.s
 
 # Help Target
 help:
@@ -213,15 +186,12 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... HWLab3_4"
-	@echo "... domain/console.o"
-	@echo "... domain/console.i"
-	@echo "... domain/console.s"
-	@echo "... domain/entities/city.o"
-	@echo "... domain/entities/city.i"
-	@echo "... domain/entities/city.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... ui/console.o"
+	@echo "... ui/console.i"
+	@echo "... ui/console.s"
 .PHONY : help
 
 

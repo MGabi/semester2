@@ -3,4 +3,4 @@ project(HWLab3_4)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(HWLab3_4 main.cpp domain/console.cpp domain/entities/city.cpp)
+add_executable(HWLab3_4 main.c ui/console.c ui/console.h)

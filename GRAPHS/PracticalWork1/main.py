@@ -8,10 +8,11 @@ from ui import UI
 
 
 def main():
-    graph = DirectedGraph("graph_data.txt")
+    graph = DirectedGraph("graph100k.txt")
     #graph.showGraph()
     # for edge, neigh in graph.edgeIDs.items():
     #     print(edge, neigh)
+    print("Isolated nodes: ", len(graph.isolatedNodes()))
     cmdDict = {0: UI.exitApp,
                1: UI.nrOfVertices,
                2: UI.edgeBetween,
@@ -21,7 +22,8 @@ def main():
                6: UI.endpointsOfEdge,
                7: UI.retriveCost,
                8: UI.modifyCost,
-               9: UI.printMenu}
+               9: UI.printMenu
+               }
 
     UI.printMenu()
     while True:

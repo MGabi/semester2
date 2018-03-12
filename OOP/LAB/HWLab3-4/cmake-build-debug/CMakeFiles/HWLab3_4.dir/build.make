@@ -57,93 +57,67 @@ include CMakeFiles/HWLab3_4.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/HWLab3_4.dir/flags.make
 
-CMakeFiles/HWLab3_4.dir/main.cpp.o: CMakeFiles/HWLab3_4.dir/flags.make
-CMakeFiles/HWLab3_4.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/cygdrive/c/Users/Gabi/UBBProjects/SEM 2/OOP/LAB/HWLab3-4/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/HWLab3_4.dir/main.cpp.o"
-	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/HWLab3_4.dir/main.cpp.o -c "/cygdrive/c/Users/Gabi/UBBProjects/SEM 2/OOP/LAB/HWLab3-4/main.cpp"
+CMakeFiles/HWLab3_4.dir/main.c.o: CMakeFiles/HWLab3_4.dir/flags.make
+CMakeFiles/HWLab3_4.dir/main.c.o: ../main.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/cygdrive/c/Users/Gabi/UBBProjects/SEM 2/OOP/LAB/HWLab3-4/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/HWLab3_4.dir/main.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/HWLab3_4.dir/main.c.o   -c "/cygdrive/c/Users/Gabi/UBBProjects/SEM 2/OOP/LAB/HWLab3-4/main.c"
 
-CMakeFiles/HWLab3_4.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/HWLab3_4.dir/main.cpp.i"
-	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/cygdrive/c/Users/Gabi/UBBProjects/SEM 2/OOP/LAB/HWLab3-4/main.cpp" > CMakeFiles/HWLab3_4.dir/main.cpp.i
+CMakeFiles/HWLab3_4.dir/main.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/HWLab3_4.dir/main.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/cygdrive/c/Users/Gabi/UBBProjects/SEM 2/OOP/LAB/HWLab3-4/main.c" > CMakeFiles/HWLab3_4.dir/main.c.i
 
-CMakeFiles/HWLab3_4.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/HWLab3_4.dir/main.cpp.s"
-	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/cygdrive/c/Users/Gabi/UBBProjects/SEM 2/OOP/LAB/HWLab3-4/main.cpp" -o CMakeFiles/HWLab3_4.dir/main.cpp.s
+CMakeFiles/HWLab3_4.dir/main.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/HWLab3_4.dir/main.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/cygdrive/c/Users/Gabi/UBBProjects/SEM 2/OOP/LAB/HWLab3-4/main.c" -o CMakeFiles/HWLab3_4.dir/main.c.s
 
-CMakeFiles/HWLab3_4.dir/main.cpp.o.requires:
+CMakeFiles/HWLab3_4.dir/main.c.o.requires:
 
-.PHONY : CMakeFiles/HWLab3_4.dir/main.cpp.o.requires
+.PHONY : CMakeFiles/HWLab3_4.dir/main.c.o.requires
 
-CMakeFiles/HWLab3_4.dir/main.cpp.o.provides: CMakeFiles/HWLab3_4.dir/main.cpp.o.requires
-	$(MAKE) -f CMakeFiles/HWLab3_4.dir/build.make CMakeFiles/HWLab3_4.dir/main.cpp.o.provides.build
-.PHONY : CMakeFiles/HWLab3_4.dir/main.cpp.o.provides
+CMakeFiles/HWLab3_4.dir/main.c.o.provides: CMakeFiles/HWLab3_4.dir/main.c.o.requires
+	$(MAKE) -f CMakeFiles/HWLab3_4.dir/build.make CMakeFiles/HWLab3_4.dir/main.c.o.provides.build
+.PHONY : CMakeFiles/HWLab3_4.dir/main.c.o.provides
 
-CMakeFiles/HWLab3_4.dir/main.cpp.o.provides.build: CMakeFiles/HWLab3_4.dir/main.cpp.o
-
-
-CMakeFiles/HWLab3_4.dir/domain/console.cpp.o: CMakeFiles/HWLab3_4.dir/flags.make
-CMakeFiles/HWLab3_4.dir/domain/console.cpp.o: ../domain/console.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/cygdrive/c/Users/Gabi/UBBProjects/SEM 2/OOP/LAB/HWLab3-4/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/HWLab3_4.dir/domain/console.cpp.o"
-	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/HWLab3_4.dir/domain/console.cpp.o -c "/cygdrive/c/Users/Gabi/UBBProjects/SEM 2/OOP/LAB/HWLab3-4/domain/console.cpp"
-
-CMakeFiles/HWLab3_4.dir/domain/console.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/HWLab3_4.dir/domain/console.cpp.i"
-	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/cygdrive/c/Users/Gabi/UBBProjects/SEM 2/OOP/LAB/HWLab3-4/domain/console.cpp" > CMakeFiles/HWLab3_4.dir/domain/console.cpp.i
-
-CMakeFiles/HWLab3_4.dir/domain/console.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/HWLab3_4.dir/domain/console.cpp.s"
-	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/cygdrive/c/Users/Gabi/UBBProjects/SEM 2/OOP/LAB/HWLab3-4/domain/console.cpp" -o CMakeFiles/HWLab3_4.dir/domain/console.cpp.s
-
-CMakeFiles/HWLab3_4.dir/domain/console.cpp.o.requires:
-
-.PHONY : CMakeFiles/HWLab3_4.dir/domain/console.cpp.o.requires
-
-CMakeFiles/HWLab3_4.dir/domain/console.cpp.o.provides: CMakeFiles/HWLab3_4.dir/domain/console.cpp.o.requires
-	$(MAKE) -f CMakeFiles/HWLab3_4.dir/build.make CMakeFiles/HWLab3_4.dir/domain/console.cpp.o.provides.build
-.PHONY : CMakeFiles/HWLab3_4.dir/domain/console.cpp.o.provides
-
-CMakeFiles/HWLab3_4.dir/domain/console.cpp.o.provides.build: CMakeFiles/HWLab3_4.dir/domain/console.cpp.o
+CMakeFiles/HWLab3_4.dir/main.c.o.provides.build: CMakeFiles/HWLab3_4.dir/main.c.o
 
 
-CMakeFiles/HWLab3_4.dir/domain/entities/city.cpp.o: CMakeFiles/HWLab3_4.dir/flags.make
-CMakeFiles/HWLab3_4.dir/domain/entities/city.cpp.o: ../domain/entities/city.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/cygdrive/c/Users/Gabi/UBBProjects/SEM 2/OOP/LAB/HWLab3-4/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/HWLab3_4.dir/domain/entities/city.cpp.o"
-	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/HWLab3_4.dir/domain/entities/city.cpp.o -c "/cygdrive/c/Users/Gabi/UBBProjects/SEM 2/OOP/LAB/HWLab3-4/domain/entities/city.cpp"
+CMakeFiles/HWLab3_4.dir/ui/console.c.o: CMakeFiles/HWLab3_4.dir/flags.make
+CMakeFiles/HWLab3_4.dir/ui/console.c.o: ../ui/console.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/cygdrive/c/Users/Gabi/UBBProjects/SEM 2/OOP/LAB/HWLab3-4/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/HWLab3_4.dir/ui/console.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/HWLab3_4.dir/ui/console.c.o   -c "/cygdrive/c/Users/Gabi/UBBProjects/SEM 2/OOP/LAB/HWLab3-4/ui/console.c"
 
-CMakeFiles/HWLab3_4.dir/domain/entities/city.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/HWLab3_4.dir/domain/entities/city.cpp.i"
-	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/cygdrive/c/Users/Gabi/UBBProjects/SEM 2/OOP/LAB/HWLab3-4/domain/entities/city.cpp" > CMakeFiles/HWLab3_4.dir/domain/entities/city.cpp.i
+CMakeFiles/HWLab3_4.dir/ui/console.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/HWLab3_4.dir/ui/console.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/cygdrive/c/Users/Gabi/UBBProjects/SEM 2/OOP/LAB/HWLab3-4/ui/console.c" > CMakeFiles/HWLab3_4.dir/ui/console.c.i
 
-CMakeFiles/HWLab3_4.dir/domain/entities/city.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/HWLab3_4.dir/domain/entities/city.cpp.s"
-	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/cygdrive/c/Users/Gabi/UBBProjects/SEM 2/OOP/LAB/HWLab3-4/domain/entities/city.cpp" -o CMakeFiles/HWLab3_4.dir/domain/entities/city.cpp.s
+CMakeFiles/HWLab3_4.dir/ui/console.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/HWLab3_4.dir/ui/console.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/cygdrive/c/Users/Gabi/UBBProjects/SEM 2/OOP/LAB/HWLab3-4/ui/console.c" -o CMakeFiles/HWLab3_4.dir/ui/console.c.s
 
-CMakeFiles/HWLab3_4.dir/domain/entities/city.cpp.o.requires:
+CMakeFiles/HWLab3_4.dir/ui/console.c.o.requires:
 
-.PHONY : CMakeFiles/HWLab3_4.dir/domain/entities/city.cpp.o.requires
+.PHONY : CMakeFiles/HWLab3_4.dir/ui/console.c.o.requires
 
-CMakeFiles/HWLab3_4.dir/domain/entities/city.cpp.o.provides: CMakeFiles/HWLab3_4.dir/domain/entities/city.cpp.o.requires
-	$(MAKE) -f CMakeFiles/HWLab3_4.dir/build.make CMakeFiles/HWLab3_4.dir/domain/entities/city.cpp.o.provides.build
-.PHONY : CMakeFiles/HWLab3_4.dir/domain/entities/city.cpp.o.provides
+CMakeFiles/HWLab3_4.dir/ui/console.c.o.provides: CMakeFiles/HWLab3_4.dir/ui/console.c.o.requires
+	$(MAKE) -f CMakeFiles/HWLab3_4.dir/build.make CMakeFiles/HWLab3_4.dir/ui/console.c.o.provides.build
+.PHONY : CMakeFiles/HWLab3_4.dir/ui/console.c.o.provides
 
-CMakeFiles/HWLab3_4.dir/domain/entities/city.cpp.o.provides.build: CMakeFiles/HWLab3_4.dir/domain/entities/city.cpp.o
+CMakeFiles/HWLab3_4.dir/ui/console.c.o.provides.build: CMakeFiles/HWLab3_4.dir/ui/console.c.o
 
 
 # Object files for target HWLab3_4
 HWLab3_4_OBJECTS = \
-"CMakeFiles/HWLab3_4.dir/main.cpp.o" \
-"CMakeFiles/HWLab3_4.dir/domain/console.cpp.o" \
-"CMakeFiles/HWLab3_4.dir/domain/entities/city.cpp.o"
+"CMakeFiles/HWLab3_4.dir/main.c.o" \
+"CMakeFiles/HWLab3_4.dir/ui/console.c.o"
 
 # External object files for target HWLab3_4
 HWLab3_4_EXTERNAL_OBJECTS =
 
-HWLab3_4.exe: CMakeFiles/HWLab3_4.dir/main.cpp.o
-HWLab3_4.exe: CMakeFiles/HWLab3_4.dir/domain/console.cpp.o
-HWLab3_4.exe: CMakeFiles/HWLab3_4.dir/domain/entities/city.cpp.o
+HWLab3_4.exe: CMakeFiles/HWLab3_4.dir/main.c.o
+HWLab3_4.exe: CMakeFiles/HWLab3_4.dir/ui/console.c.o
 HWLab3_4.exe: CMakeFiles/HWLab3_4.dir/build.make
 HWLab3_4.exe: CMakeFiles/HWLab3_4.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/cygdrive/c/Users/Gabi/UBBProjects/SEM 2/OOP/LAB/HWLab3-4/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable HWLab3_4.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/cygdrive/c/Users/Gabi/UBBProjects/SEM 2/OOP/LAB/HWLab3-4/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable HWLab3_4.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/HWLab3_4.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -151,9 +125,8 @@ CMakeFiles/HWLab3_4.dir/build: HWLab3_4.exe
 
 .PHONY : CMakeFiles/HWLab3_4.dir/build
 
-CMakeFiles/HWLab3_4.dir/requires: CMakeFiles/HWLab3_4.dir/main.cpp.o.requires
-CMakeFiles/HWLab3_4.dir/requires: CMakeFiles/HWLab3_4.dir/domain/console.cpp.o.requires
-CMakeFiles/HWLab3_4.dir/requires: CMakeFiles/HWLab3_4.dir/domain/entities/city.cpp.o.requires
+CMakeFiles/HWLab3_4.dir/requires: CMakeFiles/HWLab3_4.dir/main.c.o.requires
+CMakeFiles/HWLab3_4.dir/requires: CMakeFiles/HWLab3_4.dir/ui/console.c.o.requires
 
 .PHONY : CMakeFiles/HWLab3_4.dir/requires
 
