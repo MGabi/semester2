@@ -1,0 +1,1 @@
+/usr/bin/c++.exe -g  -Wl,--enable-auto-import CMakeFiles/HWLab3_4.dir/main.cpp.o CMakeFiles/HWLab3_4.dir/domain/console.cpp.o CMakeFiles/HWLab3_4.dir/domain/entities/city.cpp.o  -o HWLab3_4.exe -Wl,--out-implib,libHWLab3_4.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
