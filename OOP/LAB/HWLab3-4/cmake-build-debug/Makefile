@@ -123,6 +123,87 @@ HWLab3_4/fast:
 	$(MAKE) -f CMakeFiles/HWLab3_4.dir/build.make CMakeFiles/HWLab3_4.dir/build
 .PHONY : HWLab3_4/fast
 
+controller/controller.o: controller/controller.c.o
+
+.PHONY : controller/controller.o
+
+# target to build an object file
+controller/controller.c.o:
+	$(MAKE) -f CMakeFiles/HWLab3_4.dir/build.make CMakeFiles/HWLab3_4.dir/controller/controller.c.o
+.PHONY : controller/controller.c.o
+
+controller/controller.i: controller/controller.c.i
+
+.PHONY : controller/controller.i
+
+# target to preprocess a source file
+controller/controller.c.i:
+	$(MAKE) -f CMakeFiles/HWLab3_4.dir/build.make CMakeFiles/HWLab3_4.dir/controller/controller.c.i
+.PHONY : controller/controller.c.i
+
+controller/controller.s: controller/controller.c.s
+
+.PHONY : controller/controller.s
+
+# target to generate assembly for a file
+controller/controller.c.s:
+	$(MAKE) -f CMakeFiles/HWLab3_4.dir/build.make CMakeFiles/HWLab3_4.dir/controller/controller.c.s
+.PHONY : controller/controller.c.s
+
+domain/entities/country.o: domain/entities/country.c.o
+
+.PHONY : domain/entities/country.o
+
+# target to build an object file
+domain/entities/country.c.o:
+	$(MAKE) -f CMakeFiles/HWLab3_4.dir/build.make CMakeFiles/HWLab3_4.dir/domain/entities/country.c.o
+.PHONY : domain/entities/country.c.o
+
+domain/entities/country.i: domain/entities/country.c.i
+
+.PHONY : domain/entities/country.i
+
+# target to preprocess a source file
+domain/entities/country.c.i:
+	$(MAKE) -f CMakeFiles/HWLab3_4.dir/build.make CMakeFiles/HWLab3_4.dir/domain/entities/country.c.i
+.PHONY : domain/entities/country.c.i
+
+domain/entities/country.s: domain/entities/country.c.s
+
+.PHONY : domain/entities/country.s
+
+# target to generate assembly for a file
+domain/entities/country.c.s:
+	$(MAKE) -f CMakeFiles/HWLab3_4.dir/build.make CMakeFiles/HWLab3_4.dir/domain/entities/country.c.s
+.PHONY : domain/entities/country.c.s
+
+domain/entities/dynamic_array.o: domain/entities/dynamic_array.c.o
+
+.PHONY : domain/entities/dynamic_array.o
+
+# target to build an object file
+domain/entities/dynamic_array.c.o:
+	$(MAKE) -f CMakeFiles/HWLab3_4.dir/build.make CMakeFiles/HWLab3_4.dir/domain/entities/dynamic_array.c.o
+.PHONY : domain/entities/dynamic_array.c.o
+
+domain/entities/dynamic_array.i: domain/entities/dynamic_array.c.i
+
+.PHONY : domain/entities/dynamic_array.i
+
+# target to preprocess a source file
+domain/entities/dynamic_array.c.i:
+	$(MAKE) -f CMakeFiles/HWLab3_4.dir/build.make CMakeFiles/HWLab3_4.dir/domain/entities/dynamic_array.c.i
+.PHONY : domain/entities/dynamic_array.c.i
+
+domain/entities/dynamic_array.s: domain/entities/dynamic_array.c.s
+
+.PHONY : domain/entities/dynamic_array.s
+
+# target to generate assembly for a file
+domain/entities/dynamic_array.c.s:
+	$(MAKE) -f CMakeFiles/HWLab3_4.dir/build.make CMakeFiles/HWLab3_4.dir/domain/entities/dynamic_array.c.s
+.PHONY : domain/entities/dynamic_array.c.s
+
 main.o: main.c.o
 
 .PHONY : main.o
@@ -149,6 +230,33 @@ main.s: main.c.s
 main.c.s:
 	$(MAKE) -f CMakeFiles/HWLab3_4.dir/build.make CMakeFiles/HWLab3_4.dir/main.c.s
 .PHONY : main.c.s
+
+repository/repository.o: repository/repository.c.o
+
+.PHONY : repository/repository.o
+
+# target to build an object file
+repository/repository.c.o:
+	$(MAKE) -f CMakeFiles/HWLab3_4.dir/build.make CMakeFiles/HWLab3_4.dir/repository/repository.c.o
+.PHONY : repository/repository.c.o
+
+repository/repository.i: repository/repository.c.i
+
+.PHONY : repository/repository.i
+
+# target to preprocess a source file
+repository/repository.c.i:
+	$(MAKE) -f CMakeFiles/HWLab3_4.dir/build.make CMakeFiles/HWLab3_4.dir/repository/repository.c.i
+.PHONY : repository/repository.c.i
+
+repository/repository.s: repository/repository.c.s
+
+.PHONY : repository/repository.s
+
+# target to generate assembly for a file
+repository/repository.c.s:
+	$(MAKE) -f CMakeFiles/HWLab3_4.dir/build.make CMakeFiles/HWLab3_4.dir/repository/repository.c.s
+.PHONY : repository/repository.c.s
 
 ui/console.o: ui/console.c.o
 
@@ -186,9 +294,21 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... HWLab3_4"
+	@echo "... controller/controller.o"
+	@echo "... controller/controller.i"
+	@echo "... controller/controller.s"
+	@echo "... domain/entities/country.o"
+	@echo "... domain/entities/country.i"
+	@echo "... domain/entities/country.s"
+	@echo "... domain/entities/dynamic_array.o"
+	@echo "... domain/entities/dynamic_array.i"
+	@echo "... domain/entities/dynamic_array.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... repository/repository.o"
+	@echo "... repository/repository.i"
+	@echo "... repository/repository.s"
 	@echo "... ui/console.o"
 	@echo "... ui/console.i"
 	@echo "... ui/console.s"

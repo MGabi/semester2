@@ -105,19 +105,123 @@ CMakeFiles/HWLab3_4.dir/ui/console.c.o.provides: CMakeFiles/HWLab3_4.dir/ui/cons
 CMakeFiles/HWLab3_4.dir/ui/console.c.o.provides.build: CMakeFiles/HWLab3_4.dir/ui/console.c.o
 
 
+CMakeFiles/HWLab3_4.dir/domain/entities/dynamic_array.c.o: CMakeFiles/HWLab3_4.dir/flags.make
+CMakeFiles/HWLab3_4.dir/domain/entities/dynamic_array.c.o: ../domain/entities/dynamic_array.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/cygdrive/c/Users/Gabi/UBBProjects/SEM 2/OOP/LAB/HWLab3-4/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/HWLab3_4.dir/domain/entities/dynamic_array.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/HWLab3_4.dir/domain/entities/dynamic_array.c.o   -c "/cygdrive/c/Users/Gabi/UBBProjects/SEM 2/OOP/LAB/HWLab3-4/domain/entities/dynamic_array.c"
+
+CMakeFiles/HWLab3_4.dir/domain/entities/dynamic_array.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/HWLab3_4.dir/domain/entities/dynamic_array.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/cygdrive/c/Users/Gabi/UBBProjects/SEM 2/OOP/LAB/HWLab3-4/domain/entities/dynamic_array.c" > CMakeFiles/HWLab3_4.dir/domain/entities/dynamic_array.c.i
+
+CMakeFiles/HWLab3_4.dir/domain/entities/dynamic_array.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/HWLab3_4.dir/domain/entities/dynamic_array.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/cygdrive/c/Users/Gabi/UBBProjects/SEM 2/OOP/LAB/HWLab3-4/domain/entities/dynamic_array.c" -o CMakeFiles/HWLab3_4.dir/domain/entities/dynamic_array.c.s
+
+CMakeFiles/HWLab3_4.dir/domain/entities/dynamic_array.c.o.requires:
+
+.PHONY : CMakeFiles/HWLab3_4.dir/domain/entities/dynamic_array.c.o.requires
+
+CMakeFiles/HWLab3_4.dir/domain/entities/dynamic_array.c.o.provides: CMakeFiles/HWLab3_4.dir/domain/entities/dynamic_array.c.o.requires
+	$(MAKE) -f CMakeFiles/HWLab3_4.dir/build.make CMakeFiles/HWLab3_4.dir/domain/entities/dynamic_array.c.o.provides.build
+.PHONY : CMakeFiles/HWLab3_4.dir/domain/entities/dynamic_array.c.o.provides
+
+CMakeFiles/HWLab3_4.dir/domain/entities/dynamic_array.c.o.provides.build: CMakeFiles/HWLab3_4.dir/domain/entities/dynamic_array.c.o
+
+
+CMakeFiles/HWLab3_4.dir/domain/entities/country.c.o: CMakeFiles/HWLab3_4.dir/flags.make
+CMakeFiles/HWLab3_4.dir/domain/entities/country.c.o: ../domain/entities/country.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/cygdrive/c/Users/Gabi/UBBProjects/SEM 2/OOP/LAB/HWLab3-4/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/HWLab3_4.dir/domain/entities/country.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/HWLab3_4.dir/domain/entities/country.c.o   -c "/cygdrive/c/Users/Gabi/UBBProjects/SEM 2/OOP/LAB/HWLab3-4/domain/entities/country.c"
+
+CMakeFiles/HWLab3_4.dir/domain/entities/country.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/HWLab3_4.dir/domain/entities/country.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/cygdrive/c/Users/Gabi/UBBProjects/SEM 2/OOP/LAB/HWLab3-4/domain/entities/country.c" > CMakeFiles/HWLab3_4.dir/domain/entities/country.c.i
+
+CMakeFiles/HWLab3_4.dir/domain/entities/country.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/HWLab3_4.dir/domain/entities/country.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/cygdrive/c/Users/Gabi/UBBProjects/SEM 2/OOP/LAB/HWLab3-4/domain/entities/country.c" -o CMakeFiles/HWLab3_4.dir/domain/entities/country.c.s
+
+CMakeFiles/HWLab3_4.dir/domain/entities/country.c.o.requires:
+
+.PHONY : CMakeFiles/HWLab3_4.dir/domain/entities/country.c.o.requires
+
+CMakeFiles/HWLab3_4.dir/domain/entities/country.c.o.provides: CMakeFiles/HWLab3_4.dir/domain/entities/country.c.o.requires
+	$(MAKE) -f CMakeFiles/HWLab3_4.dir/build.make CMakeFiles/HWLab3_4.dir/domain/entities/country.c.o.provides.build
+.PHONY : CMakeFiles/HWLab3_4.dir/domain/entities/country.c.o.provides
+
+CMakeFiles/HWLab3_4.dir/domain/entities/country.c.o.provides.build: CMakeFiles/HWLab3_4.dir/domain/entities/country.c.o
+
+
+CMakeFiles/HWLab3_4.dir/repository/repository.c.o: CMakeFiles/HWLab3_4.dir/flags.make
+CMakeFiles/HWLab3_4.dir/repository/repository.c.o: ../repository/repository.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/cygdrive/c/Users/Gabi/UBBProjects/SEM 2/OOP/LAB/HWLab3-4/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/HWLab3_4.dir/repository/repository.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/HWLab3_4.dir/repository/repository.c.o   -c "/cygdrive/c/Users/Gabi/UBBProjects/SEM 2/OOP/LAB/HWLab3-4/repository/repository.c"
+
+CMakeFiles/HWLab3_4.dir/repository/repository.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/HWLab3_4.dir/repository/repository.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/cygdrive/c/Users/Gabi/UBBProjects/SEM 2/OOP/LAB/HWLab3-4/repository/repository.c" > CMakeFiles/HWLab3_4.dir/repository/repository.c.i
+
+CMakeFiles/HWLab3_4.dir/repository/repository.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/HWLab3_4.dir/repository/repository.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/cygdrive/c/Users/Gabi/UBBProjects/SEM 2/OOP/LAB/HWLab3-4/repository/repository.c" -o CMakeFiles/HWLab3_4.dir/repository/repository.c.s
+
+CMakeFiles/HWLab3_4.dir/repository/repository.c.o.requires:
+
+.PHONY : CMakeFiles/HWLab3_4.dir/repository/repository.c.o.requires
+
+CMakeFiles/HWLab3_4.dir/repository/repository.c.o.provides: CMakeFiles/HWLab3_4.dir/repository/repository.c.o.requires
+	$(MAKE) -f CMakeFiles/HWLab3_4.dir/build.make CMakeFiles/HWLab3_4.dir/repository/repository.c.o.provides.build
+.PHONY : CMakeFiles/HWLab3_4.dir/repository/repository.c.o.provides
+
+CMakeFiles/HWLab3_4.dir/repository/repository.c.o.provides.build: CMakeFiles/HWLab3_4.dir/repository/repository.c.o
+
+
+CMakeFiles/HWLab3_4.dir/controller/controller.c.o: CMakeFiles/HWLab3_4.dir/flags.make
+CMakeFiles/HWLab3_4.dir/controller/controller.c.o: ../controller/controller.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/cygdrive/c/Users/Gabi/UBBProjects/SEM 2/OOP/LAB/HWLab3-4/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/HWLab3_4.dir/controller/controller.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/HWLab3_4.dir/controller/controller.c.o   -c "/cygdrive/c/Users/Gabi/UBBProjects/SEM 2/OOP/LAB/HWLab3-4/controller/controller.c"
+
+CMakeFiles/HWLab3_4.dir/controller/controller.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/HWLab3_4.dir/controller/controller.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/cygdrive/c/Users/Gabi/UBBProjects/SEM 2/OOP/LAB/HWLab3-4/controller/controller.c" > CMakeFiles/HWLab3_4.dir/controller/controller.c.i
+
+CMakeFiles/HWLab3_4.dir/controller/controller.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/HWLab3_4.dir/controller/controller.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/cygdrive/c/Users/Gabi/UBBProjects/SEM 2/OOP/LAB/HWLab3-4/controller/controller.c" -o CMakeFiles/HWLab3_4.dir/controller/controller.c.s
+
+CMakeFiles/HWLab3_4.dir/controller/controller.c.o.requires:
+
+.PHONY : CMakeFiles/HWLab3_4.dir/controller/controller.c.o.requires
+
+CMakeFiles/HWLab3_4.dir/controller/controller.c.o.provides: CMakeFiles/HWLab3_4.dir/controller/controller.c.o.requires
+	$(MAKE) -f CMakeFiles/HWLab3_4.dir/build.make CMakeFiles/HWLab3_4.dir/controller/controller.c.o.provides.build
+.PHONY : CMakeFiles/HWLab3_4.dir/controller/controller.c.o.provides
+
+CMakeFiles/HWLab3_4.dir/controller/controller.c.o.provides.build: CMakeFiles/HWLab3_4.dir/controller/controller.c.o
+
+
 # Object files for target HWLab3_4
 HWLab3_4_OBJECTS = \
 "CMakeFiles/HWLab3_4.dir/main.c.o" \
-"CMakeFiles/HWLab3_4.dir/ui/console.c.o"
+"CMakeFiles/HWLab3_4.dir/ui/console.c.o" \
+"CMakeFiles/HWLab3_4.dir/domain/entities/dynamic_array.c.o" \
+"CMakeFiles/HWLab3_4.dir/domain/entities/country.c.o" \
+"CMakeFiles/HWLab3_4.dir/repository/repository.c.o" \
+"CMakeFiles/HWLab3_4.dir/controller/controller.c.o"
 
 # External object files for target HWLab3_4
 HWLab3_4_EXTERNAL_OBJECTS =
 
 HWLab3_4.exe: CMakeFiles/HWLab3_4.dir/main.c.o
 HWLab3_4.exe: CMakeFiles/HWLab3_4.dir/ui/console.c.o
+HWLab3_4.exe: CMakeFiles/HWLab3_4.dir/domain/entities/dynamic_array.c.o
+HWLab3_4.exe: CMakeFiles/HWLab3_4.dir/domain/entities/country.c.o
+HWLab3_4.exe: CMakeFiles/HWLab3_4.dir/repository/repository.c.o
+HWLab3_4.exe: CMakeFiles/HWLab3_4.dir/controller/controller.c.o
 HWLab3_4.exe: CMakeFiles/HWLab3_4.dir/build.make
 HWLab3_4.exe: CMakeFiles/HWLab3_4.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/cygdrive/c/Users/Gabi/UBBProjects/SEM 2/OOP/LAB/HWLab3-4/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable HWLab3_4.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/cygdrive/c/Users/Gabi/UBBProjects/SEM 2/OOP/LAB/HWLab3-4/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Linking C executable HWLab3_4.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/HWLab3_4.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -127,6 +231,10 @@ CMakeFiles/HWLab3_4.dir/build: HWLab3_4.exe
 
 CMakeFiles/HWLab3_4.dir/requires: CMakeFiles/HWLab3_4.dir/main.c.o.requires
 CMakeFiles/HWLab3_4.dir/requires: CMakeFiles/HWLab3_4.dir/ui/console.c.o.requires
+CMakeFiles/HWLab3_4.dir/requires: CMakeFiles/HWLab3_4.dir/domain/entities/dynamic_array.c.o.requires
+CMakeFiles/HWLab3_4.dir/requires: CMakeFiles/HWLab3_4.dir/domain/entities/country.c.o.requires
+CMakeFiles/HWLab3_4.dir/requires: CMakeFiles/HWLab3_4.dir/repository/repository.c.o.requires
+CMakeFiles/HWLab3_4.dir/requires: CMakeFiles/HWLab3_4.dir/controller/controller.c.o.requires
 
 .PHONY : CMakeFiles/HWLab3_4.dir/requires
 
