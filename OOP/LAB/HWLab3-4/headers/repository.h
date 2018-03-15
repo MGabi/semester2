@@ -20,3 +20,4 @@ int addCountry(CountriesRepo* repo, Country* country);
 int getRepoLen(CountriesRepo* repo);
 int deleteCountry(CountriesRepo* repo, char* countryName);
 void destroyRepo(CountriesRepo* r);
+void testRepository();

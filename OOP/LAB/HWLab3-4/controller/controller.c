@@ -10,6 +10,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
+#include <assert.h>
 
 Controller* createController(CountriesRepo* repo, OperationsStack* undoStack, OperationsStack* redoStack){
     Controller* c = (Controller*)malloc(sizeof(Controller));
@@ -136,4 +137,24 @@ int redo(Controller* c){
     }
     destroyOperation(opRedo);
     return 1;
+}
+
+void testController(){
+    CountriesRepo* repo = createRepo();
+    OperationsStack* undoStack = createStack();
+    OperationsStack* redoStack = createStack();
+
+    Controller* controller = createController(repo, undoStack, redoStack);
+
+    Country* c = createCountry("C1", 1, 1);
+    addCountry(controller->repo, c);
+    assert(strcmp(getCountryAt(controller->repo, 0)->name, "C1") == 0);
+    assert(getCountryAt(controller->repo, 0)->continent == 1);
+    assert(getCountryAt(controller->repo, 0)->population == 1);
+
+    //destroyRepo(repo);
+    destroyStack(undoStack);
+    destroyStack(redoStack);
+    destroyController(controller);
+    destroyCountry(c);
 }

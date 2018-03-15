@@ -87,3 +87,15 @@ int deleteCountry(CountriesRepo* repo, char* countryName){
     delete(repo -> countries, pos);
     return 1;
 }
+
+void testRepository(){
+    CountriesRepo* repo = createRepo();
+    Country* c = createCountry("C1", 1, 1);
+    addCountry(repo, c);
+    assert(strcmp(getCountryAt(repo, 0)->name, "C1") == 0);
+    assert(getCountryAt(repo, 0)->continent == 1);
+    assert(getCountryAt(repo, 0)->population == 1);
+    destroyCountry(c);
+    destroyRepo(repo);
+
+}

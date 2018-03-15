@@ -35,3 +35,5 @@ int getLength(DynamicArray* arr);
 TElement get(DynamicArray* arr, int pos);
 
 void switchElems(DynamicArray* arr, int i, int j);
+
+void testDynamicArray();

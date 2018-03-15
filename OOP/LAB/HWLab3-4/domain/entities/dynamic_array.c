@@ -4,8 +4,12 @@
 //
 
 #include "../../headers/dynamic_array.h"
+#include "../../headers/country.h"
 #include <stdlib.h>
 #include <assert.h>
+#include <stdio.h>
+#include <string.h>
+
 #define CAPACITY 10
 
 DynamicArray* createDynamicArray(int capacity, DestroyElementFunctionType destroyElemFct, CopyElementFunctionType copyElemFct){
@@ -140,4 +144,14 @@ void switchElems(DynamicArray* arr, int i, int j){
     arr->elems[i] = arr->elems[j];
     arr->elems[j] = t;
 
+}
+
+void testDynamicArray(){
+    DynamicArray* arr = createDynamicArray(10, &destroyCountry, &copyCountry);
+    add(arr, createCountry("abc", 1, 1));
+    Country* c = get(arr, 0);
+    assert(strcmp(c->name, "abc") == 0);
+    delete(arr, 0);
+    assert(arr->length == 0);
+    destroy(arr);
 }

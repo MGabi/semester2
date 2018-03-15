@@ -25,3 +25,4 @@ CountriesRepo* getRepo(Controller* c);
 
 int undo(Controller* c);
 int redo(Controller* c);
+void testController();

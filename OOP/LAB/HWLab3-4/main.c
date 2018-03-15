@@ -34,6 +34,13 @@ d. The application must provide multiple undo and redo functionality.
  * */
 
 int main() {
+    testsStack();
+    testDynamicArray();
+    testCountry();
+    testController();
+    testRepository();
+
+
 
     CountriesRepo *repo = createRepo();
     OperationsStack* undoStack = createStack();

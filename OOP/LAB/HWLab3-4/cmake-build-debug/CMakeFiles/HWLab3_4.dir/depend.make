@@ -12,6 +12,7 @@ CMakeFiles/HWLab3_4.dir/domain/entities/country.c.o: ../domain/entities/country.
 CMakeFiles/HWLab3_4.dir/domain/entities/country.c.o: ../headers/country.h
 
 CMakeFiles/HWLab3_4.dir/domain/entities/dynamic_array.c.o: ../domain/entities/dynamic_array.c
+CMakeFiles/HWLab3_4.dir/domain/entities/dynamic_array.c.o: ../headers/country.h
 CMakeFiles/HWLab3_4.dir/domain/entities/dynamic_array.c.o: ../headers/dynamic_array.h
 
 CMakeFiles/HWLab3_4.dir/domain/entities/operations.c.o: ../domain/entities/operations.c

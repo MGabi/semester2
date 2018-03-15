@@ -21,3 +21,4 @@ char* getName(Country* c);
 int getContinent(Country* c);
 int getPopulation(Country* c);
 void toString(Country* c, char str[]);
+void testCountry();

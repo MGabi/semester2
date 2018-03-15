@@ -7,6 +7,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
+#include <assert.h>
 
 Country *createCountry(char *name, int continent, int population){
     Country *country = (Country*)malloc(sizeof(Country));
@@ -94,4 +95,12 @@ void toString(Country* c, char str[]){
     }
     sprintf(str, "Country continent:%s, continent: %s, population %d\n", c -> name, continent, c -> population);
     free(continent);
+}
+
+void testCountry(){
+    Country* c = createCountry("abcd", 1, 2);
+    assert(strcmp(c->name, "abcd") == 0);
+    assert(c->continent == 1);
+    assert(c->population == 2);
+    destroyCountry(c);
 }
