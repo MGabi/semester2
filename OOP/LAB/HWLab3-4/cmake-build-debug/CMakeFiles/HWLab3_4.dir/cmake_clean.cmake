@@ -5,6 +5,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/HWLab3_4.dir/domain/entities/country.c.o"
   "CMakeFiles/HWLab3_4.dir/repository/repository.c.o"
   "CMakeFiles/HWLab3_4.dir/controller/controller.c.o"
+  "CMakeFiles/HWLab3_4.dir/domain/entities/operations.c.o"
   "HWLab3_4.pdb"
   "HWLab3_4.exe"
   "libHWLab3_4.dll.a"

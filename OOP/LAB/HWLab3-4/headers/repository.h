@@ -18,5 +18,5 @@ Country* getCountryAt(CountriesRepo* repo, int pos);
 int findPosition(CountriesRepo* repo, char* strFilter);
 int addCountry(CountriesRepo* repo, Country* country);
 int getRepoLen(CountriesRepo* repo);
-void deleteCountry(CountriesRepo* repo, char* countryName);
+int deleteCountry(CountriesRepo* repo, char* countryName);
 void destroyRepo(CountriesRepo* r);

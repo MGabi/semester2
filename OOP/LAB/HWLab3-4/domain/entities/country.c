@@ -54,7 +54,43 @@ int getPopulation(Country* c){
 }
 
 void toString(Country* c, char str[]){
+    /*
+ * 1 - AFRICA
+ * 2 - AMERICA N
+ * 3 - AMERICA S
+ * 4 - ANTARCTICA
+ * 5 - ASIA
+ * 6 - AUSTRALIA
+ * 7 - EUROPA
+ * */
+
     if (c == NULL)
         return;
-    sprintf(str, "Country name:%s, continent: %d, population %d\n", c -> name, c -> continent, c -> population);
+    char* continent = malloc(15* sizeof(char));
+    switch (c->continent){
+        case 1:
+            strcpy(continent, "Africa");
+            break;
+        case 2:
+            strcpy(continent, "America N");
+            break;
+        case 3:
+            strcpy(continent, "America S");
+            break;
+        case 4:
+            strcpy(continent, "Antarctica");
+            break;
+        case 5:
+            strcpy(continent, "Asia");
+            break;
+        case 6:
+            strcpy(continent, "Australia");
+            break;
+        case 7:
+            strcpy(continent, "Europa");
+            break;
+        default:
+            strcpy(continent, "NULL");
+    }
+    sprintf(str, "Country continent:%s, continent: %s, population %d\n", c -> name, continent, c -> population);
 }

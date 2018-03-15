@@ -5,6 +5,7 @@ CMakeFiles/HWLab3_4.dir/controller/controller.c.o: ../controller/controller.c
 CMakeFiles/HWLab3_4.dir/controller/controller.c.o: ../controller/controller.h
 CMakeFiles/HWLab3_4.dir/controller/controller.c.o: ../headers/country.h
 CMakeFiles/HWLab3_4.dir/controller/controller.c.o: ../headers/dynamic_array.h
+CMakeFiles/HWLab3_4.dir/controller/controller.c.o: ../headers/operations.h
 CMakeFiles/HWLab3_4.dir/controller/controller.c.o: ../headers/repository.h
 
 CMakeFiles/HWLab3_4.dir/domain/entities/country.c.o: ../domain/entities/country.c
@@ -13,21 +14,29 @@ CMakeFiles/HWLab3_4.dir/domain/entities/country.c.o: ../headers/country.h
 CMakeFiles/HWLab3_4.dir/domain/entities/dynamic_array.c.o: ../domain/entities/dynamic_array.c
 CMakeFiles/HWLab3_4.dir/domain/entities/dynamic_array.c.o: ../headers/dynamic_array.h
 
+CMakeFiles/HWLab3_4.dir/domain/entities/operations.c.o: ../domain/entities/operations.c
+CMakeFiles/HWLab3_4.dir/domain/entities/operations.c.o: ../headers/country.h
+CMakeFiles/HWLab3_4.dir/domain/entities/operations.c.o: ../headers/operations.h
+
 CMakeFiles/HWLab3_4.dir/main.c.o: ../controller/controller.h
 CMakeFiles/HWLab3_4.dir/main.c.o: ../headers/console.h
 CMakeFiles/HWLab3_4.dir/main.c.o: ../headers/country.h
 CMakeFiles/HWLab3_4.dir/main.c.o: ../headers/dynamic_array.h
+CMakeFiles/HWLab3_4.dir/main.c.o: ../headers/operations.h
 CMakeFiles/HWLab3_4.dir/main.c.o: ../headers/repository.h
 CMakeFiles/HWLab3_4.dir/main.c.o: ../main.c
 
 CMakeFiles/HWLab3_4.dir/repository/repository.c.o: ../headers/country.h
 CMakeFiles/HWLab3_4.dir/repository/repository.c.o: ../headers/dynamic_array.h
+CMakeFiles/HWLab3_4.dir/repository/repository.c.o: ../headers/operations.h
 CMakeFiles/HWLab3_4.dir/repository/repository.c.o: ../headers/repository.h
 CMakeFiles/HWLab3_4.dir/repository/repository.c.o: ../repository/repository.c
 
+CMakeFiles/HWLab3_4.dir/ui/console.c.o: ../controller/controller.h
 CMakeFiles/HWLab3_4.dir/ui/console.c.o: ../headers/console.h
 CMakeFiles/HWLab3_4.dir/ui/console.c.o: ../headers/country.h
 CMakeFiles/HWLab3_4.dir/ui/console.c.o: ../headers/dynamic_array.h
+CMakeFiles/HWLab3_4.dir/ui/console.c.o: ../headers/operations.h
 CMakeFiles/HWLab3_4.dir/ui/console.c.o: ../headers/repository.h
 CMakeFiles/HWLab3_4.dir/ui/console.c.o: ../ui/console.c
 

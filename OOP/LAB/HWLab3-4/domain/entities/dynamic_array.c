@@ -8,25 +8,45 @@
 #include <assert.h>
 #define CAPACITY 10
 
-DynamicArray* createDynamicArray(int capacity, DestroyElementFunctionType destroyElemFct)
-{
+DynamicArray* createDynamicArray(int capacity, DestroyElementFunctionType destroyElemFct, CopyElementFunctionType copyElemFct){
     DynamicArray* da = (DynamicArray*)malloc(sizeof(DynamicArray));
-    // make sure that the space was allocated
     if (da == NULL)
         return NULL;
 
     da->capacity = capacity;
     da->length = 0;
 
-    // allocate space for the elements
     da->elems = (TElement*)malloc(capacity * sizeof(TElement));
     if (da->elems == NULL)
         return NULL;
 
-    // initialize the function pointer
     da->destroyElemFct = destroyElemFct;
+    da->copyElemFct = copyElemFct;
 
     return da;
+}
+
+DynamicArray* copyDynArray(DynamicArray* da){
+    if (da == NULL)
+        return NULL;
+
+    DynamicArray* dac = (DynamicArray*)malloc(sizeof(DynamicArray));
+
+    dac->capacity = da->capacity;
+    dac->length = 0;
+
+    dac->elems = (TElement*)malloc(dac->capacity* sizeof(TElement));
+    if (da->elems == NULL)
+        return NULL;
+
+    dac -> destroyElemFct = da->destroyElemFct;
+
+    for (int i = 0; i < da->length; i++) {
+        TElement new = copy(da, get(da, i));
+        add(dac, new);
+    }
+
+    return dac;
 }
 
 void destroy(DynamicArray* arr)
@@ -47,8 +67,13 @@ void destroy(DynamicArray* arr)
     arr = NULL;
 }
 
-// Resizes the array, allocating more space.
-// If more space cannot be allocated, returns -1, else it returns 0.
+TElement copy(DynamicArray* arr, TElement tElement){
+    if (tElement == NULL)
+        return NULL;
+
+    return arr->copyElemFct(tElement);
+}
+
 int resize(DynamicArray* arr)
 {
     if (arr == NULL)
@@ -61,14 +86,6 @@ int resize(DynamicArray* arr)
     if (aux == NULL)
     	return - 1;
     arr->elems = aux;
-    // version 2 - allocate new memory, copy everything and deallocate the old memory
-    /*TElement* aux = (TElement*)malloc(arr->capacity * sizeof(TElement));
-    if (aux == NULL)
-        return -1;
-    for (int i = 0; i < arr->length; i++)
-        aux[i] = arr->elems[i];
-    free(arr->elems);
-    arr->elems = aux;*/
 
     return 0;
 }
@@ -115,4 +132,11 @@ int getLength(DynamicArray* arr)
 TElement get(DynamicArray* arr, int pos)
 {
     return arr->elems[pos];
+}
+
+void switchElems(DynamicArray* arr, int i, int j){
+    TElement t = arr->elems[i];
+    arr->elems[i] = arr->elems[j];
+    arr->elems[j] = t;
+
 }

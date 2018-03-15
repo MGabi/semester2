@@ -10,5 +10,7 @@ void printMenu();
 int isCommandValid(int cmd);
 int readIntegerNumber(const char* message);
 void listAll(CountriesRepo* repo, char* str);
+void listAllByContinent(CountriesRepo* repo, int cont, int pop);
 Country* readCountryData();
-void readString(char* message, char *str);
+void readString(char* message, char* str);
+

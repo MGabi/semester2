@@ -4,13 +4,15 @@
 //
 #include "../headers/repository.h"
 #include "../headers/country.h"
+#include "../headers/operations.h"
 #include <stdlib.h>
 #include <string.h>
 #include <assert.h>
 
 CountriesRepo* createRepo(){
     CountriesRepo* repo = (CountriesRepo*)malloc(sizeof(CountriesRepo));
-    repo -> countries = createDynamicArray(CAPACITY, &destroyCountry);
+    repo -> countries = createDynamicArray(CAPACITY, (DestroyElementFunctionType) &destroyCountry,
+                                           (CopyElementFunctionType) &copyCountry);
 
     return repo;
 }
@@ -74,16 +76,14 @@ int getRepoLen(CountriesRepo* repo){
     return getLength(repo->countries);
 }
 
-void deleteCountry(CountriesRepo* repo, char* countryName){
+int deleteCountry(CountriesRepo* repo, char* countryName){
     if (repo == NULL)
-        return;
+        return -1;
 
     int pos = findPosition(repo, countryName);
     if (pos == -1)
-        return;
-
-    Country* c = get(repo -> countries, pos);
-    //destroyCountry(c);
+        return -1;
 
     delete(repo -> countries, pos);
+    return 1;
 }

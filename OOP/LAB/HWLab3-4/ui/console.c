@@ -7,6 +7,8 @@
 #include "../headers/console.h"
 #include "../headers/repository.h"
 #include "../headers/country.h"
+#include "../headers/dynamic_array.h"
+#include "../controller/controller.h"
 #include <string.h>
 
 void printMenu(){
@@ -54,21 +56,60 @@ void listAll(CountriesRepo* repo, char *str){
 
     if (l == 0)
         printf("There are no countries\n");
-
+    DynamicArray* copy = copyDynArray(repo->countries);
+    sortCountriesByContinent(copy);
     if (strcmp(str, "-") == 0){
         for (int i = 0; i < l; i++) {
             char s[200];
-            toString(getCountryAt(repo, i), s);
+            toString(get(copy, i), s);
             printf("%s\n", s);
         }
     } else{
         for (int i = 0; i < l; i++) {
             char s[200];
-            if(strstr(getCountryAt(repo, i)->name, str) != NULL) {
+            Country* c = get(copy, i);
+            if(strstr(c->name, str) != NULL) {
                 toString(getCountryAt(repo, i), s);
                 printf("%s\n", s);
             }
         }
+    }
+}
+
+void listAllByContinent(CountriesRepo* repo, int cont, int pop){
+    int l = getRepoLen(repo);
+
+    if (l == 0)
+        printf("There are no countries\n");
+
+    if (cont == 0){
+        DynamicArray* copy = copyDynArray(repo->countries);
+
+        sortCountriesByPop(copy);
+
+        for (int i = 0; i < l; i++) {
+            char s[200];
+            toString(get(copy, i), s);
+            printf("%s\n", s);
+        }
+        destroy(copy);
+    } else{
+        DynamicArray* copy = copyDynArray(repo->countries);
+        for (int i = 0; i < copy->length; ++i) {
+            Country* c = get(copy, i);
+            if (c->population < pop || c->continent != cont) {
+                delete(copy, i--);
+            }
+        }
+
+        sortCountriesByPop(copy);
+
+        for (int i = 0; i < copy->length; i++) {
+            char s[200];
+            toString(get(copy, i), s);
+            printf("%s\n", s);
+        }
+        destroy(copy);
     }
 }
 

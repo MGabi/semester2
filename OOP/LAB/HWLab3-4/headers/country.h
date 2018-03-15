@@ -15,8 +15,8 @@ typedef struct {
 
 Country* createCountry(char *name, int continent, int population);
 void destroyCountry(Country* country);
+Country* copyCountry(Country* country);
 void modifyCountry(Country* country, int population);
-Country* copyCountry(Country* c);
 char* getName(Country* c);
 int getContinent(Country* c);
 int getPopulation(Country* c);

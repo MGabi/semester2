@@ -204,6 +204,33 @@ domain/entities/dynamic_array.c.s:
 	$(MAKE) -f CMakeFiles/HWLab3_4.dir/build.make CMakeFiles/HWLab3_4.dir/domain/entities/dynamic_array.c.s
 .PHONY : domain/entities/dynamic_array.c.s
 
+domain/entities/operations.o: domain/entities/operations.c.o
+
+.PHONY : domain/entities/operations.o
+
+# target to build an object file
+domain/entities/operations.c.o:
+	$(MAKE) -f CMakeFiles/HWLab3_4.dir/build.make CMakeFiles/HWLab3_4.dir/domain/entities/operations.c.o
+.PHONY : domain/entities/operations.c.o
+
+domain/entities/operations.i: domain/entities/operations.c.i
+
+.PHONY : domain/entities/operations.i
+
+# target to preprocess a source file
+domain/entities/operations.c.i:
+	$(MAKE) -f CMakeFiles/HWLab3_4.dir/build.make CMakeFiles/HWLab3_4.dir/domain/entities/operations.c.i
+.PHONY : domain/entities/operations.c.i
+
+domain/entities/operations.s: domain/entities/operations.c.s
+
+.PHONY : domain/entities/operations.s
+
+# target to generate assembly for a file
+domain/entities/operations.c.s:
+	$(MAKE) -f CMakeFiles/HWLab3_4.dir/build.make CMakeFiles/HWLab3_4.dir/domain/entities/operations.c.s
+.PHONY : domain/entities/operations.c.s
+
 main.o: main.c.o
 
 .PHONY : main.o
@@ -303,6 +330,9 @@ help:
 	@echo "... domain/entities/dynamic_array.o"
 	@echo "... domain/entities/dynamic_array.i"
 	@echo "... domain/entities/dynamic_array.s"
+	@echo "... domain/entities/operations.o"
+	@echo "... domain/entities/operations.i"
+	@echo "... domain/entities/operations.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
