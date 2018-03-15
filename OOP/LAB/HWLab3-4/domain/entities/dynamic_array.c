@@ -56,7 +56,8 @@ void destroy(DynamicArray* arr)
 
     // deallocate each of the elements
     for (int i = 0; i < arr->length; i++)
-        arr->destroyElemFct(arr->elems[i]);
+        if (arr->elems != NULL)
+            arr->destroyElemFct(arr->elems[i]);
 
     // free the space allocated for the elements
     free(arr->elems);

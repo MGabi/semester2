@@ -152,25 +152,12 @@ int main() {
             break;
         }
     }
-
-//    CountriesRepo *repo = createRepo();
-//    OperationsStack* undoStack = createStack();
-//    OperationsStack* redoStack = createStack();
-//    Controller *ctrl = createController(repo, undoStack, redoStack);
 //
-//    Country* c1 = createCountry("Maldives", 5, 20000000);
-//    Country* c2 = createCountry("Latvia", 7, 1200000);
-//    Country* c3 = createCountry("Afghanistan", 5, 9300000);
-//    Country* c4 = createCountry("Finland", 7, 1700000);
-//    Country* c5 = createCountry("Sierra Leone", 1, 5600000);
-//    Country* c6 = createCountry("Micronesia", 6, 230000);
-//    Country* c7 = createCountry("Jordan", 5, 5400000);
-//    Country* c8 = createCountry("Puerto Rico", 2, 1700000);
-//    Country* c9 = createCountry("Bahamas", 3, 3900000);
-    destroyRepo(repo);
+//    destroyRepo(repo);
+    destroyController(ctrl);
     destroyStack(undoStack);
     destroyStack(redoStack);
-    destroyController(ctrl);
+
     destroyCountry(c1);
     destroyCountry(c2);
     destroyCountry(c3);

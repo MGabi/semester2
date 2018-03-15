@@ -35,7 +35,7 @@ int readIntegerNumber(const char* message)
 
     while (flag == 0)
     {
-        printf(message);
+        printf("%s", message);
         scanf("%s", s);
 
         r = sscanf(s, "%d", &res);	// reads data from s and stores them as integer, if possible; returns 1 if successful
@@ -47,7 +47,7 @@ int readIntegerNumber(const char* message)
 }
 
 void readString(char* message, char *str){
-    printf(message);
+    printf("%s", message);
     scanf("%s", str);
 }
 
@@ -115,7 +115,7 @@ void listAllByContinent(CountriesRepo* repo, int cont, int pop){
 
 
 Country* readCountryData(){
-    char *name =(char*)malloc(15* sizeof(char));
+    char name[15];
     int pop;
     int cont;
     printf("Country name: ");

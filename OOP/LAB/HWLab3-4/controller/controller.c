@@ -99,6 +99,7 @@ void sortCountriesByPop(DynamicArray *countries){
             if (c1->population > c2->population){
                 switchElems(countries, i, j);
             }
+
         }
     }
 }

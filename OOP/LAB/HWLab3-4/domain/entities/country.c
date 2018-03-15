@@ -93,4 +93,5 @@ void toString(Country* c, char str[]){
             strcpy(continent, "NULL");
     }
     sprintf(str, "Country continent:%s, continent: %s, population %d\n", c -> name, continent, c -> population);
+    free(continent);
 }
