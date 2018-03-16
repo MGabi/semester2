@@ -83,6 +83,7 @@ int undo(Controller* c){
     }else if(strcmp(getOperationType(opUndo), "remove") == 0){
         Country* country = copyCountry(getCountry(opUndo));
         addCountry(c->repo, country);
+        free(country);
     }else if(strcmp(getOperationType(opUndo), "update") == 0){
         Country* country = getCountry(opUndo);
         modifyCountry(findCountryBy(c->repo, country->name), country->population);

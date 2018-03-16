@@ -74,6 +74,7 @@ void listAll(CountriesRepo* repo, char *str){
             }
         }
     }
+    destroy(copy);
 }
 
 void listAllByContinent(CountriesRepo* repo, int cont, int pop){

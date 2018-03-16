@@ -34,8 +34,7 @@ DynamicArray* copyDynArray(DynamicArray* da){
     if (da == NULL)
         return NULL;
 
-    DynamicArray* dac = (DynamicArray*)malloc(sizeof(DynamicArray));
-
+    DynamicArray* dac = (DynamicArray*)malloc(sizeof(da));
     dac->capacity = da->capacity;
     dac->length = 0;
 

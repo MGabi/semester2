@@ -93,6 +93,7 @@ int main() {
                 //deleteCountry(ctrl->repo, name);
             }
             free(name);
+            free(message);
         }
         else if(op == 3) {
             char *message = (char*)malloc(100* sizeof(char));
@@ -155,8 +156,7 @@ int main() {
             break;
         }
         else {
-            printf("default\n");
-            break;
+            printf("No such option");
         }
     }
 //
