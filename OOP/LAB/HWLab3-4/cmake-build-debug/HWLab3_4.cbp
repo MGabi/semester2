@@ -8,122 +8,122 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/mgabbi/UBB/semester2/semester2/OOP/LAB/HWLab3-4/cmake-build-debug"/>
+				<Option working_dir="/home/mgabi/Workspace/UBB/semester2/OOP/LAB/HWLab3-4/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/mgabbi/UBB/semester2/semester2/OOP/LAB/HWLab3-4/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/mgabbi/UBB/semester2/semester2/OOP/LAB/HWLab3-4/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/mgabbi/UBB/semester2/semester2/OOP/LAB/HWLab3-4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/mgabbi/UBB/semester2/semester2/OOP/LAB/HWLab3-4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/mgabi/Workspace/UBB/semester2/OOP/LAB/HWLab3-4/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/mgabi/Workspace/UBB/semester2/OOP/LAB/HWLab3-4/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/mgabi/Workspace/UBB/semester2/OOP/LAB/HWLab3-4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/mgabi/Workspace/UBB/semester2/OOP/LAB/HWLab3-4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/mgabbi/UBB/semester2/semester2/OOP/LAB/HWLab3-4/cmake-build-debug"/>
+				<Option working_dir="/home/mgabi/Workspace/UBB/semester2/OOP/LAB/HWLab3-4/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/mgabbi/UBB/semester2/semester2/OOP/LAB/HWLab3-4/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/mgabbi/UBB/semester2/semester2/OOP/LAB/HWLab3-4/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/mgabbi/UBB/semester2/semester2/OOP/LAB/HWLab3-4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/mgabbi/UBB/semester2/semester2/OOP/LAB/HWLab3-4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/mgabi/Workspace/UBB/semester2/OOP/LAB/HWLab3-4/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/mgabi/Workspace/UBB/semester2/OOP/LAB/HWLab3-4/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/mgabi/Workspace/UBB/semester2/OOP/LAB/HWLab3-4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/mgabi/Workspace/UBB/semester2/OOP/LAB/HWLab3-4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/mgabbi/UBB/semester2/semester2/OOP/LAB/HWLab3-4/cmake-build-debug"/>
+				<Option working_dir="/home/mgabi/Workspace/UBB/semester2/OOP/LAB/HWLab3-4/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/mgabbi/UBB/semester2/semester2/OOP/LAB/HWLab3-4/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/mgabbi/UBB/semester2/semester2/OOP/LAB/HWLab3-4/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/mgabbi/UBB/semester2/semester2/OOP/LAB/HWLab3-4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/mgabbi/UBB/semester2/semester2/OOP/LAB/HWLab3-4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/mgabi/Workspace/UBB/semester2/OOP/LAB/HWLab3-4/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/mgabi/Workspace/UBB/semester2/OOP/LAB/HWLab3-4/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/mgabi/Workspace/UBB/semester2/OOP/LAB/HWLab3-4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/mgabi/Workspace/UBB/semester2/OOP/LAB/HWLab3-4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="HWLab3_4">
-				<Option output="/home/mgabbi/UBB/semester2/semester2/OOP/LAB/HWLab3-4/cmake-build-debug/HWLab3_4" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/mgabbi/UBB/semester2/semester2/OOP/LAB/HWLab3-4/cmake-build-debug"/>
+				<Option output="/home/mgabi/Workspace/UBB/semester2/OOP/LAB/HWLab3-4/cmake-build-debug/HWLab3_4" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/mgabi/Workspace/UBB/semester2/OOP/LAB/HWLab3-4/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/usr/include/c++/7"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
-					<Add directory="/usr/include/c++/7/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/mgabbi/UBB/semester2/semester2/OOP/LAB/HWLab3-4/cmake-build-debug/Makefile&quot;  VERBOSE=1 HWLab3_4"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/mgabbi/UBB/semester2/semester2/OOP/LAB/HWLab3-4/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/mgabbi/UBB/semester2/semester2/OOP/LAB/HWLab3-4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/mgabbi/UBB/semester2/semester2/OOP/LAB/HWLab3-4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/mgabi/Workspace/UBB/semester2/OOP/LAB/HWLab3-4/cmake-build-debug/Makefile&quot;  VERBOSE=1 HWLab3_4"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/mgabi/Workspace/UBB/semester2/OOP/LAB/HWLab3-4/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/mgabi/Workspace/UBB/semester2/OOP/LAB/HWLab3-4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/mgabi/Workspace/UBB/semester2/OOP/LAB/HWLab3-4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="HWLab3_4/fast">
-				<Option output="/home/mgabbi/UBB/semester2/semester2/OOP/LAB/HWLab3-4/cmake-build-debug/HWLab3_4" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/mgabbi/UBB/semester2/semester2/OOP/LAB/HWLab3-4/cmake-build-debug"/>
+				<Option output="/home/mgabi/Workspace/UBB/semester2/OOP/LAB/HWLab3-4/cmake-build-debug/HWLab3_4" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/mgabi/Workspace/UBB/semester2/OOP/LAB/HWLab3-4/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/usr/include/c++/7"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
-					<Add directory="/usr/include/c++/7/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/mgabbi/UBB/semester2/semester2/OOP/LAB/HWLab3-4/cmake-build-debug/Makefile&quot;  VERBOSE=1 HWLab3_4/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/mgabbi/UBB/semester2/semester2/OOP/LAB/HWLab3-4/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/mgabbi/UBB/semester2/semester2/OOP/LAB/HWLab3-4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/mgabbi/UBB/semester2/semester2/OOP/LAB/HWLab3-4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/mgabi/Workspace/UBB/semester2/OOP/LAB/HWLab3-4/cmake-build-debug/Makefile&quot;  VERBOSE=1 HWLab3_4/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/mgabi/Workspace/UBB/semester2/OOP/LAB/HWLab3-4/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/mgabi/Workspace/UBB/semester2/OOP/LAB/HWLab3-4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/mgabi/Workspace/UBB/semester2/OOP/LAB/HWLab3-4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/mgabbi/UBB/semester2/semester2/OOP/LAB/HWLab3-4/controller/controller.c">
+		<Unit filename="/home/mgabi/Workspace/UBB/semester2/OOP/LAB/HWLab3-4/controller/controller.c">
 			<Option target="HWLab3_4"/>
 		</Unit>
-		<Unit filename="/home/mgabbi/UBB/semester2/semester2/OOP/LAB/HWLab3-4/controller/controller.h">
+		<Unit filename="/home/mgabi/Workspace/UBB/semester2/OOP/LAB/HWLab3-4/controller/controller.h">
 			<Option target="HWLab3_4"/>
 		</Unit>
-		<Unit filename="/home/mgabbi/UBB/semester2/semester2/OOP/LAB/HWLab3-4/domain/entities/country.c">
+		<Unit filename="/home/mgabi/Workspace/UBB/semester2/OOP/LAB/HWLab3-4/domain/entities/country.c">
 			<Option target="HWLab3_4"/>
 		</Unit>
-		<Unit filename="/home/mgabbi/UBB/semester2/semester2/OOP/LAB/HWLab3-4/domain/entities/dynamic_array.c">
+		<Unit filename="/home/mgabi/Workspace/UBB/semester2/OOP/LAB/HWLab3-4/domain/entities/dynamic_array.c">
 			<Option target="HWLab3_4"/>
 		</Unit>
-		<Unit filename="/home/mgabbi/UBB/semester2/semester2/OOP/LAB/HWLab3-4/domain/entities/operations.c">
+		<Unit filename="/home/mgabi/Workspace/UBB/semester2/OOP/LAB/HWLab3-4/domain/entities/operations.c">
 			<Option target="HWLab3_4"/>
 		</Unit>
-		<Unit filename="/home/mgabbi/UBB/semester2/semester2/OOP/LAB/HWLab3-4/headers/console.h">
+		<Unit filename="/home/mgabi/Workspace/UBB/semester2/OOP/LAB/HWLab3-4/headers/console.h">
 			<Option target="HWLab3_4"/>
 		</Unit>
-		<Unit filename="/home/mgabbi/UBB/semester2/semester2/OOP/LAB/HWLab3-4/headers/country.h">
+		<Unit filename="/home/mgabi/Workspace/UBB/semester2/OOP/LAB/HWLab3-4/headers/country.h">
 			<Option target="HWLab3_4"/>
 		</Unit>
-		<Unit filename="/home/mgabbi/UBB/semester2/semester2/OOP/LAB/HWLab3-4/headers/dynamic_array.h">
+		<Unit filename="/home/mgabi/Workspace/UBB/semester2/OOP/LAB/HWLab3-4/headers/dynamic_array.h">
 			<Option target="HWLab3_4"/>
 		</Unit>
-		<Unit filename="/home/mgabbi/UBB/semester2/semester2/OOP/LAB/HWLab3-4/headers/operations.h">
+		<Unit filename="/home/mgabi/Workspace/UBB/semester2/OOP/LAB/HWLab3-4/headers/operations.h">
 			<Option target="HWLab3_4"/>
 		</Unit>
-		<Unit filename="/home/mgabbi/UBB/semester2/semester2/OOP/LAB/HWLab3-4/headers/repository.h">
+		<Unit filename="/home/mgabi/Workspace/UBB/semester2/OOP/LAB/HWLab3-4/headers/repository.h">
 			<Option target="HWLab3_4"/>
 		</Unit>
-		<Unit filename="/home/mgabbi/UBB/semester2/semester2/OOP/LAB/HWLab3-4/main.c">
+		<Unit filename="/home/mgabi/Workspace/UBB/semester2/OOP/LAB/HWLab3-4/main.c">
 			<Option target="HWLab3_4"/>
 		</Unit>
-		<Unit filename="/home/mgabbi/UBB/semester2/semester2/OOP/LAB/HWLab3-4/repository/repository.c">
+		<Unit filename="/home/mgabi/Workspace/UBB/semester2/OOP/LAB/HWLab3-4/repository/repository.c">
 			<Option target="HWLab3_4"/>
 		</Unit>
-		<Unit filename="/home/mgabbi/UBB/semester2/semester2/OOP/LAB/HWLab3-4/ui/console.c">
+		<Unit filename="/home/mgabi/Workspace/UBB/semester2/OOP/LAB/HWLab3-4/ui/console.c">
 			<Option target="HWLab3_4"/>
 		</Unit>
-		<Unit filename="/home/mgabbi/UBB/semester2/semester2/OOP/LAB/HWLab3-4/CMakeLists.txt">
+		<Unit filename="/home/mgabi/Workspace/UBB/semester2/OOP/LAB/HWLab3-4/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

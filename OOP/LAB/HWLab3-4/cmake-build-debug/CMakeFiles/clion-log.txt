@@ -1,6 +1,6 @@
-/home/mgabbi/IDEs/clion-2017.3.3/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/mgabbi/UBB/semester2/semester2/OOP/LAB/HWLab3-4
--- The C compiler identification is GNU 7.2.0
--- The CXX compiler identification is GNU 7.2.0
+/home/mgabi/IDEs/clion-2017.3.4/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/mgabi/Workspace/UBB/semester2/OOP/LAB/HWLab3-4
+-- The C compiler identification is GNU 5.4.0
+-- The CXX compiler identification is GNU 5.4.0
 -- Check for working C compiler: /usr/bin/cc
 -- Check for working C compiler: /usr/bin/cc -- works
 -- Detecting C compiler ABI info
@@ -15,4 +15,4 @@
 -- Detecting CXX compile features - done
 -- Configuring done
 -- Generating done
--- Build files have been written to: /home/mgabbi/UBB/semester2/semester2/OOP/LAB/HWLab3-4/cmake-build-debug
+-- Build files have been written to: /home/mgabi/Workspace/UBB/semester2/OOP/LAB/HWLab3-4/cmake-build-debug
