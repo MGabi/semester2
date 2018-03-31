@@ -8,10 +8,11 @@ class Tutorial {
 public:
     Tutorial();
     Tutorial(const std::string &title, const std::string &presenter, const std::string &refLink, const int duration, const int likes);
-    ~Tutorial();
+    //~Tutorial();
     std::string getTitle();
     std::string getPresenter();
     std::string getRefLink();
+    int operator==(const Tutorial t);
     int getDuration();
     int getLikes();
     void play();

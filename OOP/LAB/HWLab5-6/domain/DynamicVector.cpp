@@ -19,6 +19,15 @@ DynamicVector::~DynamicVector() {
 	delete[] this->elems;
 }
 
+int DynamicVector::operator-(const TElement &elem) {
+	int pos = this->findElemPosition(elem);
+	if (pos != -1){
+		this->remove(pos);
+		return 1;
+	}
+	return 0;
+}
+
 DynamicVector& DynamicVector::operator=(const DynamicVector& v) {
 	if (this == &v)
 		return *this;
@@ -71,4 +80,12 @@ TElement* DynamicVector::getAllElems() const {
 int DynamicVector::getSize() const
 {
 	return this->size;
+}
+
+int DynamicVector::findElemPosition(const TElement elem) {
+	for (int i=0; i<this->size; i++)
+        if (this->elems[i] == elem)
+			return i;
+
+	return -1;
 }

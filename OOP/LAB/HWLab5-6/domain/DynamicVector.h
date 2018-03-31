@@ -25,10 +25,12 @@ public:
 	void add(const TElement& e);
 
 	void remove(int position);
+	int operator-(const TElement& elem);
 
 	void update(int position, const TElement& e);
 
 	int getSize() const;
+	int findElemPosition(const TElement elem);
 	TElement* getAllElems() const;
 
 private:

@@ -12,6 +12,7 @@ Requirements:
     DONE - get the endpoints of an edge specified by an Edge_id (if applicable);
     DONE - retrieve or modify the information (the integer) attached to a specified edge.
 """
+from copy import deepcopy
 
 import matplotlib.pyplot as plt
 import networkx as nx
@@ -22,6 +23,7 @@ class DirectedGraph(object):
 
     def __init__(self, fileName):
         self.__vertices = 0
+        self.__verticesList = []
         self.__edges = 0
         self.__graphIn = {}
         self.__graphOut = {}
@@ -30,8 +32,16 @@ class DirectedGraph(object):
         self.readGraph(fileName)
 
     @property
+    def verticesList(self):
+        return self.__verticesList
+
+    @property
     def vertices(self):
         return self.__vertices
+
+    @vertices.setter
+    def vertices(self, increment):
+        self.__vertices += increment
 
     @property
     def edges(self):
@@ -58,7 +68,7 @@ class DirectedGraph(object):
         with open(fileName, "r") as graph:
             line = graph.readline().split()
             self.__vertices = int(line[0])
-
+            self.__verticesList = [el for el in range(self.__vertices)]
             for i in range(0, self.__vertices):
                 self.graphOut[i] = []
                 self.graphIn[i] = []
@@ -84,24 +94,32 @@ class DirectedGraph(object):
 
 
     def addEdge(self, vertexStart, vertexEnd, cost, id):
-        if not self.isEdge(vertexStart, vertexEnd):
-            self.__graphOut[vertexStart].append(vertexEnd)
-            self.__graphIn[vertexEnd].append(vertexStart)
-            self.__costs[vertexStart, vertexEnd] = cost
-            self.__edgeIDs[id] = [vertexStart, vertexEnd]
+        if self.vertexExists(vertexStart) and self.vertexExists(vertexEnd):
+            if not self.isEdge(vertexStart, vertexEnd):
+                if id not in self.__edgeIDs.keys():
+                    self.__graphOut[vertexStart].append(vertexEnd)
+                    self.__graphIn[vertexEnd].append(vertexStart)
+                    self.__costs[vertexStart, vertexEnd] = cost
+                    self.__edgeIDs[id] = [vertexStart, vertexEnd]
+                else:
+                    raise Exception("ID {0} already exists!".format(id))
+            else:
+                raise Exception("Edge {0} -> {1} already exists!".format(vertexStart, vertexEnd))
         else:
-            raise Exception("Edge {0} -> {1} already exists!".format(vertexStart, vertexEnd))
-
+            raise Exception("One or both vertices does not exists!")
 
     def removeEdge(self, vertexStart, vertexEnd):
         if self.isEdge(vertexStart, vertexEnd):
             self.__graphOut[vertexStart].remove(vertexEnd)
             self.__graphIn[vertexEnd].remove(vertexStart)
-            del self.__costs[vertexStart, vertexEnd]
+            #del self.__costs[vertexStart, vertexEnd]
+            self.__costs.pop(vertexStart, vertexEnd)
 
-            for id, edge in self.__edgeIDs.items():
+            for id, edge in self.__edgeIDs.copy().items():
                 if edge == [vertexStart, vertexEnd]:
-                    del self.__edgeIDs[id]
+                    self.__edgeIDs.pop(id)
+                    #del self.__edgeIDs[id]
+
         else:
             raise Exception("Edge {0} -> {1} does not exists!".format(vertexStart, vertexEnd))
 
@@ -137,7 +155,7 @@ class DirectedGraph(object):
         return len(self.__graphOut[vertex])
 
     def vertexExists(self, vertex):
-        return vertex >= 0 and vertex < self.vertices
+        return vertex in self.verticesList
 
     def outboundEdgesOf(self, vertex):
         return self.__graphOut[vertex]
@@ -162,6 +180,18 @@ class DirectedGraph(object):
             if self.graphIn[el] == [] and self.graphOut[el] == []:
                 isolated.append(el)
         return isolated
+
+    def addVertex(self, vertex):
+        self.graphIn[vertex] = []
+        self.graphOut[vertex] = []
+        self.vertices = 1
+        self.verticesList.append(vertex)
+
+    def removeVertex(self, vertex):
+        self.verticesList.remove(vertex)
+        self.graphOut.pop(vertex)
+        self.graphIn.pop(vertex)
+        self.vertices = -1
 
 class Edge(object):
 
