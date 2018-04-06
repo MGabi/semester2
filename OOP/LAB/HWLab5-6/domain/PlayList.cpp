@@ -9,31 +9,21 @@ void PlayList::add(const Tutorial& tutorial) {
 	this->tutorials.add(tutorial);
 }
 
-Tutorial PlayList::getCurrentTutorial() {
-	if (this->current == this->tutorials.getSize())
-		this->current = 0;
-	Tutorial* elems = this->tutorials.getAllElems();
-	if (elems != NULL)
-		return elems[this->current];
+int PlayList::size() {
+	return this->tutorials.getSize();
+}
+
+Tutorial PlayList::get(int i) {
+	if (i >= 0 && i < this->size())
+		return this->tutorials.getAllElems()[i];
 	return Tutorial{};
 }
 
-void PlayList::play() {
-	if (this->tutorials.getSize() == 0)
-		return;
-	this->current = 0;
-	Tutorial currentSong = this->getCurrentTutorial();
-	currentSong.play();
-}
-
-void PlayList::next() {
-	if (this->tutorials.getSize() == 0)
-		return;
-	this->current++;
-	Tutorial currentSong = this->getCurrentTutorial();
-	currentSong.play();
-}
-
-bool PlayList::isEmpty() {
-	return this->tutorials.getSize() == 0;
+void PlayList::remove(Tutorial tutorial) {
+	for (int i = 0; i < this->tutorials.getSize(); ++i) {
+		if (this->tutorials.getAllElems()[i].getTitle() == tutorial.getTitle()){
+		    this->tutorials.remove(i);
+			break;
+		}
+	}
 }

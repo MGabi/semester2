@@ -47,11 +47,14 @@ int Tutorial::getLikes() {
 }
 
 void Tutorial::play() {
-    system("google-chrome-stable http://www.youtube.com");
+    std::string link{"google-chrome-stable"};
+    link.append(" " + this->refLink);
+    system(link.c_str());
+    //system("google-chrome-stable http://www.youtube.com");
     std::cout << "Playing: " << this->title;
 }
 
-int Tutorial::operator==(const Tutorial t) {
+int Tutorial::operator==(Tutorial t) {
     return this->getTitle().compare(t.getTitle()) == 0 &&
            this->getPresenter().compare(t.getPresenter()) == 0 &&
            this->getRefLink().compare(t.getRefLink()) == 0 &&

@@ -23,6 +23,7 @@ int Repository::removeTutorial(std::string title, std::string presenter) {
 		return -1;
 
 	this->tutorials.remove(position);
+    return 1;
 }
 
 void Repository::updateTutorial(std::string title,
@@ -40,8 +41,6 @@ void Repository::updateTutorial(std::string title,
 
 int Repository::findTutorialPosition(std::string title, std::string presenter) {
 	Tutorial* songsInDynamicVector = this->tutorials.getAllElems();
-	if (songsInDynamicVector == NULL)
-		return -1;
 
 	for (int i = 0; i < this->tutorials.getSize(); i++) {
 		Tutorial t = songsInDynamicVector[i];

@@ -31,38 +31,6 @@ class DirectedGraph(object):
         self.__edgeIDs = {}
         self.readGraph(fileName)
 
-    @property
-    def verticesList(self):
-        return self.__verticesList
-
-    @property
-    def vertices(self):
-        return self.__vertices
-
-    @vertices.setter
-    def vertices(self, increment):
-        self.__vertices += increment
-
-    @property
-    def edges(self):
-        return len(self.__costs)
-
-    @property
-    def graphIn(self):
-        return self.__graphIn
-
-    @property
-    def graphOut(self):
-        return self.__graphOut
-
-    @property
-    def costs(self):
-        return self.__costs
-
-    @property
-    def edgeIDs(self):
-        return self.__edgeIDs
-
     def readGraph(self, fileName):
         id = 0
         with open(fileName, "r") as graph:
@@ -192,6 +160,38 @@ class DirectedGraph(object):
         self.graphOut.pop(vertex)
         self.graphIn.pop(vertex)
         self.vertices = -1
+
+    @property
+    def verticesList(self):
+        return self.__verticesList
+
+    @property
+    def vertices(self):
+        return self.__vertices
+
+    @vertices.setter
+    def vertices(self, increment):
+        self.__vertices += increment
+
+    @property
+    def edges(self):
+        return len(self.__costs)
+
+    @property
+    def graphIn(self):
+        return self.__graphIn
+
+    @property
+    def graphOut(self):
+        return self.__graphOut
+
+    @property
+    def costs(self):
+        return self.__costs
+
+    @property
+    def edgeIDs(self):
+        return self.__edgeIDs
 
 class Edge(object):
 

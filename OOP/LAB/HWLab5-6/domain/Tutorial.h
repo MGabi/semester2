@@ -12,7 +12,7 @@ public:
     std::string getTitle();
     std::string getPresenter();
     std::string getRefLink();
-    int operator==(const Tutorial t);
+    int operator==(Tutorial t);
     int getDuration();
     int getLikes();
     void play();

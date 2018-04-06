@@ -17,15 +17,15 @@ void UI::printAdministratorMenu() {
 	cout << "\t2. Delete a tutorial" << endl;
 	cout << "\t3. Update a tutorial" << endl;
 	cout << "\t4. List all tutorials" << endl;
-	cout << "\t0. EXIT" << endl;
+	cout << "\t0. Exit" << endl;
 }
 
 void UI::printUserMenu() {
 	cout << "Available commands:" << endl;
-	cout << "\t1. Add a video to your playlist" << endl;
-	cout << "\t3. Delete a tutorial from your list" << endl;
-	cout << "\t4. Next." << endl;
-	cout << "\t0. Back." << endl;
+	cout << "\t1. See all the videos having a given presenter" << endl;
+	cout << "\t2. See your playlist" << endl;
+	cout << "\t3. Start your playlist" << endl;
+	cout << "\t0. Exit" << endl;
 }
 
 void UI::addTutorialToRepo() {
@@ -128,12 +128,66 @@ void UI::addTutorialToPlaylist() {
 	this->ctrl.addTutorialToPlaylist(s);
 }
 
-void UI::addAllTutorialsByPresenterToPlaylist() {
-	cout << "Enter the artist: ";
-	std::string artist;
-	getline(cin, artist);
+void UI::showAllVideosByPresenter() {
+	DynamicVector v = this->ctrl.getRepo().getTutorials();
+	Tutorial* tutorials = v.getAllElems();
+	if (tutorials == NULL)
+		return;
 
-	this->ctrl.addAllTutorialsByPresenterToPlaylist(artist);
+	if (v.getSize() == 0) {
+		cout << "There are no tutorials available!\n";
+		return;
+	}
+
+	cout << " 	enter a presenter: ";
+	std::string presenter;
+	getline(cin, presenter);
+
+	for (int i = 0; i < v.getSize(); i++) {
+		Tutorial t = tutorials[i];
+		if (t.getPresenter().compare(presenter) == 0) {
+			int d = t.getDuration();
+			cout << t.getPresenter()
+				 << " - "
+				 << t.getTitle()
+				 << "; "
+				 << t.getDuration()
+				 << " seconds"
+				 << endl;
+
+			cout << "Like? (y/n)";
+			std::string like;
+			getline(cin, like);
+			if(like.compare("y") == 0) {
+				this->ctrl.addTutorialToPlaylist(t);
+				cout << "Video added to playlist";
+			}else{
+				cout << "Not added to playlist";
+			}
+		}
+	}
+}
+
+void UI::showPlaylist() {
+	for (int i=0; i<ctrl.getPlaylist().size(); i++){
+		cout << ctrl.getPlaylist().get(i).toString();
+	}
+
+}
+
+void UI::startPlaylist() {
+	for (int i=0; i<ctrl.getPlaylist().size(); i++){
+		Tutorial t = ctrl.getPlaylist().get(i);
+		cout << "Playing: " << t.toString() << endl;
+		t.play();
+        this->ctrl.deleteTutorialFromPlaylist(t);
+		cout << "Play the next one? (y/n) :";
+		std::string next;
+		getline(cin, next);
+		if (next.compare("y") != 0)
+			break;
+
+	}
 }
 
 void UI::run() {
@@ -145,7 +199,7 @@ void UI::run() {
 		cout << "Choose an operating mode: ";
 		cin >> command;
 		cin.ignore();
-
+		//command = 2;
 		if (command == 0)
 			break;
 		else if (command == 1) {
@@ -180,6 +234,9 @@ void UI::run() {
 			}			
 		}else if (command == 2) {
 			//user part
+			this->ctrl.addTutorialToPlaylist(this->ctrl.getRepo().getTutorials().getAllElems()[0]);
+			this->ctrl.addTutorialToPlaylist(this->ctrl.getRepo().getTutorials().getAllElems()[3]);
+			this->ctrl.addTutorialToPlaylist(this->ctrl.getRepo().getTutorials().getAllElems()[5]);
 			while (true)
 			{
 				UI::printUserMenu();
@@ -191,32 +248,13 @@ void UI::run() {
 					break;
 				switch (commandPlaylist) {
 					case 1:
-						this->addTutorialToPlaylist();
+						this->showAllVideosByPresenter();
 						break;
 					case 2:
-						this->addAllTutorialsByPresenterToPlaylist();
+						this->showPlaylist();
 						break;
-					case 3: {
-						if (this->ctrl.getPlaylist().isEmpty()) {
-							cout << "Nothing to play, the playlist is empty." << endl;
-							continue;
-						}
-						this->ctrl.startPlaylist();
-						Tutorial s = this->ctrl.getPlaylist().getCurrentTutorial();
-						cout << "Now playing: " << s.getPresenter() << " - " << s.getTitle() << endl;
-						break;
-					}
-					case 4: {
-						if (this->ctrl.getPlaylist().isEmpty())
-						{
-							cout << "Nothing to play, the playlist is empty." << endl;
-							continue;
-						}
-						this->ctrl.nextTutorialPlaylist();
-						Tutorial s = this->ctrl.getPlaylist().getCurrentTutorial();
-						cout << "Now playing: " << s.getPresenter() << " - " << s.getTitle() << endl;
-						break;
-					}
+					case 3:
+						this->startPlaylist();
 				}
 			}
 		}else{

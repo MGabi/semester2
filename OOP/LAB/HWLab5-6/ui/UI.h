@@ -20,7 +20,11 @@ private:
 	void updateTutorialFromRepo();
 	void displayAllTutorialsFromRepo();
 	void addTutorialToPlaylist();
-    void addAllTutorialsByPresenterToPlaylist();
 
+    void showAllVideosByPresenter();
+
+	void showPlaylist();
+
+	void startPlaylist();
 };
 

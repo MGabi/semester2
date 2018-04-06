@@ -12,16 +12,10 @@ public:
 	// Adds a song to the playlist.
 	void add(const Tutorial& tutorial);
 
-	// Returns the song that is currently playing.
-	Tutorial getCurrentTutorial();
+	Tutorial get(int i);
 
-	// Starts the playlist with the first tutorial.
-	void play();
+	int size();
 
-	// Plays the next song in the playlist.
-	void next();
-
-	// Checks if the playlist is empty.
-	bool isEmpty();
+    void remove(Tutorial tutorial);
 };
 

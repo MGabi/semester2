@@ -10,7 +10,7 @@ from ui import UI
 
 
 def main():
-    graph = DirectedGraph("graph_data.txt")
+    graph = DirectedGraph("g10k.txt")
     #graph.showGraph()
     # for edge, neigh in graph.edgeIDs.items():
     #     print(edge, neigh)

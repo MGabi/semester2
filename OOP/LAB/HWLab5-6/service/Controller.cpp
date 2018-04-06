@@ -27,22 +27,6 @@ void Controller::addTutorialToPlaylist(const Tutorial &tutorial) {
 	this->playList.add(tutorial);
 }
 
-void Controller::addAllTutorialsByPresenterToPlaylist(const std::string &presenter) {
-	// get all the tutorials from the repository
-	DynamicVector v = this->repo.getTutorials();
-	Tutorial* tutorials = v.getAllElems();
-	for (int i = 0; i < v.getSize(); i++)
-	{
-		Tutorial t = tutorials[i];
-		if (t.getPresenter() == presenter)
-			this->playList.add(t);
-	}
-}
-
-void Controller::startPlaylist() {
-	this->playList.play();
-}
-
-void Controller::nextTutorialPlaylist() {
-	this->playList.next();
+void Controller::deleteTutorialFromPlaylist(Tutorial tutorial) {
+	this->playList.remove(tutorial);
 }

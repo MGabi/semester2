@@ -15,4 +15,7 @@ add_executable(HWLab5_6 main.cpp
         service/Controller.cpp
         service/Controller.h
         ui/UI.cpp
-        ui/UI.h)
+        ui/UI.h AppTest.cpp AppTest.h)
+
+include(CodeCoverage.cmake)
+APPEND_COVERAGE_COMPILER_FLAGS()

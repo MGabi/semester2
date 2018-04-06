@@ -132,7 +132,7 @@ class UI(object):
     def saveGraph(graph: DirectedGraph):
         with open("newGraph.txt", "w+") as f:
             for vertex in graph.verticesList:
-                f.write(str(vertex) + " " + str(13graph.graphOut[vertex]) + "\n")
+                f.write(str(vertex) + " " + str(graph.graphOut[vertex]) + "\n")
 
     @staticmethod
     def exitApp(*args):
