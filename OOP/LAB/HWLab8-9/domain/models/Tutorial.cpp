@@ -72,6 +72,16 @@ bool Tutorial::operator==(const Tutorial &t) {
            t.getLikes() == this->getLikes();
 }
 
+Tutorial::~Tutorial() {
+
+}
+
+void Tutorial::play() {
+    string cmd{"google-chrome-stable "};
+    cmd.append(this->getRefLink());
+    system(cmd.c_str());
+}
+
 
 
 

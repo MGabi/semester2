@@ -22,12 +22,12 @@ public:
 
     virtual vector<Tutorial *> getAllTutorials(){}
 
-    virtual Tutorial getTutorial(string name, string presenter){}
+    virtual Tutorial * getTutorial(string title, string presenter){}
     virtual Tutorial * getTutorial(int position){}
 
-    virtual vector<Tutorial> getTutorialsBy(string name = "", string presenter = ""){}
+    virtual vector<Tutorial *> getTutorialsBy(string title = "", string presenter = ""){}
 
-    virtual bool tutorialExists(string name, string presenter){}
+    virtual bool tutorialExists(string title, string presenter){}
 
     virtual bool loadData(){}
 

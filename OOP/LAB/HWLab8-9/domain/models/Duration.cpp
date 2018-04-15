@@ -31,3 +31,7 @@ ostream &operator<<(ostream &os, const Duration &duration) {
 
     return os;
 }
+
+string Duration::toString() const {
+    return string{to_string(this->minutes).append(":").append(to_string(this->seconds))};
+}

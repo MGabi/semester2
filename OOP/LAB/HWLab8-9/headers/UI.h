@@ -30,4 +30,8 @@ public:
     void readTutorialData(Tutorial &tutorial);
 
     void readTitleAndPresenter(string *pString, string *pBasic_string);
+
+    void readPresenter(string *presenter);
+
+    void displayTutorials(vector<Tutorial *> tutorials);
 };

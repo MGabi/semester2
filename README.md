@@ -7,3 +7,4 @@
 
 **GRAPHS**
 - Labwork #1
+- Labwork #2

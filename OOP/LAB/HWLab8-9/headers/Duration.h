@@ -17,6 +17,8 @@ public:
 
     void setSeconds(int seconds);
 
+    string toString()const;
+
     friend ostream &operator<<(ostream &os, const Duration &duration);
 
 

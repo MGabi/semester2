@@ -2,26 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3c6707f0-2f23-45dd-82f9-638368d6cff8" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/../../OOP/LAB/HWLab5-6/.idea/dictionaries/mgabi.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../OOP/LAB/HWLab5-6/AppTest.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../OOP/LAB/HWLab5-6/AppTest.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../OOP/LAB/HWLab5-6/CodeCoverage.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PracticalWork2/.idea/PracticalWork2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PracticalWork2/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PracticalWork2/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PracticalWork2/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../OOP/LAB/HWLab8-9/domain/Playlist.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../OOP/LAB/HWLab8-9/headers/Playlist.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../OOP/LAB/HWLab8-9/playlist_test.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../OOP/LAB/HWLab8-9/repo_csv_test.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/directed_graph.py" beforeDir="false" afterPath="$PROJECT_DIR$/directed_graph.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OOP/LAB/HWLab5-6/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../OOP/LAB/HWLab5-6/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OOP/LAB/HWLab5-6/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../OOP/LAB/HWLab5-6/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OOP/LAB/HWLab5-6/domain/PlayList.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../OOP/LAB/HWLab5-6/domain/PlayList.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OOP/LAB/HWLab5-6/domain/PlayList.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../OOP/LAB/HWLab5-6/domain/PlayList.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OOP/LAB/HWLab5-6/domain/Tutorial.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../OOP/LAB/HWLab5-6/domain/Tutorial.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OOP/LAB/HWLab5-6/domain/Tutorial.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../OOP/LAB/HWLab5-6/domain/Tutorial.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OOP/LAB/HWLab5-6/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../OOP/LAB/HWLab5-6/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OOP/LAB/HWLab5-6/repository/Repository.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../OOP/LAB/HWLab5-6/repository/Repository.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OOP/LAB/HWLab5-6/service/Controller.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../OOP/LAB/HWLab5-6/service/Controller.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OOP/LAB/HWLab5-6/service/Controller.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../OOP/LAB/HWLab5-6/service/Controller.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OOP/LAB/HWLab5-6/ui/UI.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../OOP/LAB/HWLab5-6/ui/UI.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OOP/LAB/HWLab5-6/ui/UI.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../OOP/LAB/HWLab5-6/ui/UI.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../OOP/LAB/HWLab8-9/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../OOP/LAB/HWLab8-9/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../OOP/LAB/HWLab8-9/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../OOP/LAB/HWLab8-9/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../OOP/LAB/HWLab8-9/CoverageTests.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../OOP/LAB/HWLab8-9/CoverageTests.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../OOP/LAB/HWLab8-9/controllers/Controller.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../OOP/LAB/HWLab8-9/controllers/Controller.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../OOP/LAB/HWLab8-9/domain/CSVRepo.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../OOP/LAB/HWLab8-9/domain/CSVRepo.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../OOP/LAB/HWLab8-9/domain/models/Duration.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../OOP/LAB/HWLab8-9/domain/models/Duration.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../OOP/LAB/HWLab8-9/domain/models/Tutorial.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../OOP/LAB/HWLab8-9/domain/models/Tutorial.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../OOP/LAB/HWLab8-9/headers/CSVRepo.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../OOP/LAB/HWLab8-9/headers/CSVRepo.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../OOP/LAB/HWLab8-9/headers/Controller.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../OOP/LAB/HWLab8-9/headers/Controller.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../OOP/LAB/HWLab8-9/headers/CoverageTests.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../OOP/LAB/HWLab8-9/headers/CoverageTests.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../OOP/LAB/HWLab8-9/headers/Duration.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../OOP/LAB/HWLab8-9/headers/Duration.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../OOP/LAB/HWLab8-9/headers/Repo.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../OOP/LAB/HWLab8-9/headers/Repo.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../OOP/LAB/HWLab8-9/headers/Tutorial.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../OOP/LAB/HWLab8-9/headers/Tutorial.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../OOP/LAB/HWLab8-9/headers/UI.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../OOP/LAB/HWLab8-9/headers/UI.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../OOP/LAB/HWLab8-9/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../OOP/LAB/HWLab8-9/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../OOP/LAB/HWLab8-9/repo_csv.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../../OOP/LAB/HWLab8-9/repo_csv.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../OOP/LAB/HWLab8-9/ui/UI.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../OOP/LAB/HWLab8-9/ui/UI.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../OOP/LAB/HWLab8-9/validators/Validators.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../OOP/LAB/HWLab8-9/validators/Validators.cpp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -34,59 +41,7 @@
     <SUITE FILE_PATH="coverage/PracticalWork1$main.coverage" NAME="main Coverage Results" MODIFIED="1522651695325" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="directed_graph.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/directed_graph.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="152" column="28" selection-start-line="152" selection-start-column="28" selection-end-line="152" selection-end-column="28" />
-              <folding>
-                <element signature="e#957#982#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
-              <folding>
-                <element signature="e#96#112#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="g10k.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/g10k.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
-              <caret line="4" column="9" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ui.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ui.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2992">
-              <caret line="136" column="17" selection-start-line="136" selection-start-column="17" selection-end-line="136" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="graph_data.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/graph_data.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="5" column="8" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -121,10 +76,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="120" />
-    <option name="y" value="89" />
-    <option name="width" value="1438" />
-    <option name="height" value="698" />
+    <option name="y" value="-4" />
+    <option name="width" value="1920" />
+    <option name="height" value="1015" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -138,11 +92,6 @@
             <path>
               <item name="PracticalWork1" type="b2602c69:ProjectViewProjectNode" />
               <item name="PracticalWork1" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PracticalWork1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PracticalWork1" type="462c0819:PsiDirectoryNode" />
-              <item name="venv" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -215,23 +164,22 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="-11" width="1922" height="1023" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="-4" width="1920" height="1015" extended-state="6" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.6044199" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.6044199" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32869378" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.171875" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.171875" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="right" id="SciView" order="3" weight="0.66471213" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -621,16 +569,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
-          <folding>
-            <element signature="e#96#112#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/g10k.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="88">
@@ -644,6 +582,16 @@
           <caret line="152" column="28" selection-start-line="152" selection-start-column="28" selection-end-line="152" selection-end-column="28" />
           <folding>
             <element signature="e#957#982#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="24" column="18" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
+          <folding>
+            <element signature="e#96#112#0" expanded="true" />
           </folding>
         </state>
       </provider>

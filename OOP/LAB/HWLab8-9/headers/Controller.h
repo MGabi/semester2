@@ -5,14 +5,16 @@
 
 #include "Repo.h"
 #include "CSVRepo.h"
+#include "Playlist.h"
 
 class Controller {
 private:
     CSVRepo *repo;
-public:
-    Controller();
+    Playlist *playlist;
 
-    explicit Controller(Repo* repo);
+public:
+
+    explicit Controller(Repo *repo, Playlist *playlist);
 
     void addTutorialToRepo(Tutorial tutorial);
 
@@ -21,4 +23,12 @@ public:
     bool updateTutorial(Tutorial tutorial);
 
     vector<Tutorial*> getAllTutorials();
+
+    vector<Tutorial *> getTutorialsByPresenter(string presenter);
+
+    void addTutorialToPlaylist(Tutorial tutorial);
+
+    vector<Tutorial *> getPlaylist();
+
+    void openPlaylistFile();
 };

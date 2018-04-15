@@ -12,6 +12,7 @@ public:
     Tutorial() = default;
     Tutorial(string title, string presenter, string refLink, Duration duration, int like);
     Tutorial(const Tutorial &t);
+    ~Tutorial();
 
     const string &getTitle() const {
         return title;
@@ -57,6 +58,8 @@ public:
 
     friend ifstream &operator>>(ifstream &in, Tutorial &tutorial);
     friend ostream &operator<<(ostream &os, const Tutorial &tutorial);
+
+    void play();
 
 private:
     string title;

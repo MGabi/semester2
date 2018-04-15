@@ -5,11 +5,11 @@
 #include <utility>
 #include "../headers/Controller.h"
 #include "../headers/Validators.h"
+#include "../headers/Playlist.h"
 
-Controller::Controller() {}
-
-Controller::Controller(Repo *repo) {
+Controller::Controller(Repo *repo, Playlist *playlist) {
     this->repo = dynamic_cast<CSVRepo*>(repo);
+    this->playlist = playlist;
 }
 
 void Controller::addTutorialToRepo(Tutorial tutorial) {
@@ -34,4 +34,22 @@ bool Controller::updateTutorial(Tutorial tutorial) {
 
 vector<Tutorial*> Controller::getAllTutorials() {
     return repo->getAllTutorials();
+}
+
+vector<Tutorial*> Controller::getTutorialsByPresenter(string presenter) {
+    return this->repo->getTutorialsBy("", std::move(presenter));
+
+}
+
+void Controller::addTutorialToPlaylist(Tutorial tutorial) {
+    playlist->addTutorialToPlaylist(tutorial);
+}
+
+vector<Tutorial *> Controller::getPlaylist() {
+    return playlist->getUserWatchlist();
+}
+
+void Controller::openPlaylistFile() {
+    playlist->openPlaylistFile();
+
 }

@@ -8,5 +8,8 @@ bool Validators::isOptionValid(int option, int maxOp) {
 }
 
 bool Validators::validateTutorial(Tutorial tutorial) {
-    return true;
+    return !tutorial.getTitle().empty() &&
+           !tutorial.getPresenter().empty() &&
+           !tutorial.getRefLink().empty() &&
+           !tutorial.getLikes() >= 0;
 }

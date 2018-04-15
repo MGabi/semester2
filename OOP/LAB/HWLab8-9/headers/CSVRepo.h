@@ -12,7 +12,7 @@ private:
 
 public:
     CSVRepo() = default;
-
+    explicit CSVRepo(const string &csvFile);
     void addTutorialToRepo(Tutorial t) override;
 
     long findTutorialPosition(string title, string presenter) override;
@@ -23,17 +23,18 @@ public:
 
     vector<Tutorial*> getAllTutorials() override;
 
-    Tutorial getTutorial(string name, string presenter) override;
+    Tutorial * getTutorial(string title, string presenter) override;
 
-    vector<Tutorial> getTutorialsBy(string name, string presenter) override;
+    vector<Tutorial *> getTutorialsBy(string title, string presenter) override;
 
-    bool tutorialExists(string name, string presenter) override;
+    bool tutorialExists(string title, string presenter) override;
 
     bool loadData() override;
 
-    explicit CSVRepo(const string &csvFile);
+    void saveData();
 
     Tutorial* getTutorial(int position) override;
 
 
+    void writeDataToFile();
 };

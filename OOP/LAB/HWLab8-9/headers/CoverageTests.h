@@ -14,4 +14,14 @@ public:
     void testDuration();
 
     void testCSVRepo();
+
+    void testCSVRepoFile();
+
+    void writeTestFile();
+
+    void testController();
+
+    void writePlaylistFile();
+
+    void testPlaylist();
 };

@@ -50,7 +50,8 @@ void UI::printUserMenu() {
     cout << "\t1. See all the videos having a given presenter" << endl;
     cout << "\t2. See your playlist" << endl;
     cout << "\t3. Start your playlist" << endl;
-    cout << "\t4. Exit" << endl;
+    cout << "\t4. Open the playlist file" << endl;
+    cout << "\t5. Exit" << endl;
 }
 
 void UI::readOption(int &op, int maxOp) {
@@ -71,7 +72,7 @@ void UI::startAdministratorMode() {
     int op;
     this->printAdministratorMenu();
     while(true){
-        this->readOption(op, 5);
+        this->readOption(op, 6);
         switch (op){
             case 1:{
                 Tutorial t{};
@@ -128,7 +129,42 @@ void UI::startAdministratorMode() {
 }
 
 void UI::startUserMode() {
-
+    int op;
+    this->printUserMenu();
+    while(true){
+        this->readOption(op, 5);
+        switch (op){
+            case 1:{
+                string presenter;
+                readPresenter(&presenter);
+                displayTutorials(this->ctrl->getTutorialsByPresenter(presenter));
+                break;
+            }case 2:{
+                for(auto tutorial: ctrl->getPlaylist())
+                    cout << *tutorial << endl;
+                break;
+            }case 3:{
+                for(auto tutorial: ctrl->getPlaylist()){
+                    tutorial->play();
+                    cout << "Play the next one?(y/n)" << endl;
+                    char option;
+                    cin >> option;
+                    if (option == 'n')
+                        break;
+                }
+                break;
+            }case 4:{
+                ctrl->openPlaylistFile();
+                break;
+            }case 5:{
+                cout << "The user mode is now closed!";
+                return;
+                break;
+            }default:
+                cout << "Something went wrong.\nThe program will close gracefully." << endl;
+                return;
+        }
+    }
 }
 
 void UI::readTutorialData(Tutorial &tutorial) {
@@ -174,4 +210,26 @@ void UI::readTitleAndPresenter(string *title, string *presenter) {
 
     cout << "Enter the presenter: ";
     getline(cin, *presenter);
+}
+
+void UI::readPresenter(string *presenter) {
+    cout << "Enter the presenter: ";
+    cin.ignore();
+    getline(cin, *presenter);
+}
+
+void UI::displayTutorials(vector<Tutorial *> tutorials) {
+    if (&tutorials != NULL){
+        for (auto tutorial: tutorials){
+            cout << *tutorial << endl;
+            cout << "Would you like to add this tutorial to your playlist? (y/n)";
+            char option;
+            cin >> option;
+            if (option == 'y')
+                ctrl->addTutorialToPlaylist(*tutorial);
+            cout << endl;
+        }
+    } else{
+        cout << "There are no such tutorials in repository " << endl;
+    }
 }
