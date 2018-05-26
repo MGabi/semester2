@@ -12,6 +12,7 @@ Requirements:
     DONE - get the endpoints of an edge specified by an Edge_id (if applicable);
     DONE - retrieve or modify the information (the integer) attached to a specified edge.
 """
+import traceback
 from copy import deepcopy
 
 import matplotlib.pyplot as plt
@@ -45,16 +46,17 @@ class UndirectedGraph(object):
 
             self.__edges = int(line[1])
 
-            for i in range(0, self.__vertices):
-                self.__graphIn[i] = []
-                self.__graphOut[i] = []
-
             try:
                 line = graph.readline().split()
                 while line != []:
-                    edge = Edge(int(line[0]), int(line[1]), int(line[2]), id)
+                    try:
+                        edge = Edge(int(line[0]), int(line[1]), int(line[2]), id)
+                        self.addEdge(edge.x, edge.y, edge.cost, edge.ID)
+                        edge2 = Edge(int(line[1]), int(line[0]), int(line[2]), id+1)
+                        self.addEdge(edge2.x, edge2.y, edge2.cost, edge2.ID)
+                    except Exception as ex:
+                        pass
                     id += 2
-                    self.addEdge(edge.x, edge.y, edge.cost, edge.ID)
                     line = graph.readline().split()
 
             except EOFError as eof:
@@ -68,17 +70,10 @@ class UndirectedGraph(object):
             if not self.isEdge(vertexStart, vertexEnd):
                 if id not in self.__edgeIDs.keys():
                     self.__graphOut[vertexStart].append(vertexEnd)
-                    self.__graphOut[vertexEnd].append(vertexStart)
-
-                    self.__graphIn[vertexStart].append(vertexEnd)
                     self.__graphIn[vertexEnd].append(vertexStart)
 
                     self.__costs[vertexStart, vertexEnd] = cost
-                    self.__costs[vertexEnd, vertexStart] = cost
-
-                    self.__edgeIDs[id-1] = [vertexStart, vertexEnd]
-                    self.__edgeIDs[id] = [vertexEnd, vertexStart]
-
+                    self.__edgeIDs[id] = [vertexStart, vertexEnd]
                 else:
                     raise Exception("ID {0} already exists!".format(id))
             else:
@@ -128,6 +123,7 @@ class UndirectedGraph(object):
         return edgeID in self.__edgeIDs.keys()
 
     def isEdge(self, vertexStart, vertexEnd):
+        #return vertexEnd in self.graphOut[vertexStart]
         return vertexEnd in self.__graphOut[vertexStart] and vertexStart in self.__graphIn[vertexEnd]
 
     def inDegreeOf(self, vertex):

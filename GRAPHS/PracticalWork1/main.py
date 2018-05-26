@@ -10,11 +10,11 @@ from ui import UI
 
 
 def main():
-    graph = DirectedGraph("g10k.txt")
+    graph = DirectedGraph("my_graph.txt")
     #graph.showGraph()
     # for edge, neigh in graph.edgeIDs.items():
     #     print(edge, neigh)
-    #print("Isolated nodes: ", len(graph.isolatedNodes()))
+    print("Isolated nodes: ", len(graph.isolatedNodes()))
     cmdDict = {0: UI.exitApp,
                1: UI.nrOfVertices,
                2: UI.edgeBetween,
@@ -29,8 +29,9 @@ def main():
                11: UI.addEdge,
                12: UI.removeEdge,
                13: UI.saveGraph,
-               14: UI.printMenu
-               }
+               14: UI.shortestPath,
+               15: UI.predecessors,
+               16: UI.printMenu}
 
     UI.printMenu()
     while True:

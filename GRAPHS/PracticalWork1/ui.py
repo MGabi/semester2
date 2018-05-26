@@ -26,13 +26,15 @@ class UI(object):
         print("11. Add edge")
         print("12. Remove edge")
         print("13. Save graph")
-        print("14. Print menu")
+        print("14. Shortest path")
+        print("15. Check if this graph is a DAG")
+        print("16. Print menu")
         print("0. Exit app")
 
     @staticmethod
     def readCommand():
         option = int(input(">>> "))
-        if option not in range(0, 15):
+        if option not in range(0, 16):
             raise ValueError("Invalid option")
 
         return option
@@ -40,6 +42,36 @@ class UI(object):
     @staticmethod
     def nrOfVertices(graph: DirectedGraph):
         print("The number of vertices is:", graph.vertices, "\n")
+
+    @staticmethod
+    def shortestPath(graph: DirectedGraph):
+        x = int(input("    vertexStart : "))
+        y = int(input("    vertexIn    : "))
+        if graph.vertexExists(x) and graph.vertexExists(y):
+            # cost, prev = graph.dijkstra(x, y)
+            cost, prev = graph.dijkstraBack(x, y)
+            print("The cost is : {0} ".format(cost[y]))
+            path = []
+
+            start = x
+            end = y
+
+            while True:
+                path.append(end)
+                if start == end:
+                    break
+                #print(path)
+                try:
+                    end = prev[end]
+                except KeyError:
+                    print("There is no path!")
+                    break
+
+            path.reverse()
+            print("The path is:", *path)
+
+        else:
+            print("One or both vertices does not exists!")
 
     @staticmethod
     def edgeBetween(graph: DirectedGraph):
@@ -52,6 +84,15 @@ class UI(object):
                 print("There is not an edge!\n")
         else:
             print("One or both vertices does not exists!")
+
+    @staticmethod
+    def predecessors(graph: DirectedGraph):
+        pred = graph.predecessors()
+        print(pred)
+        if (len(pred) == len(graph.verticesList)):
+            print("This graph IS a DAG")
+        else:
+            print("This graph IS not a DAG")
 
     @staticmethod
     def inOutDegree(graph: DirectedGraph):

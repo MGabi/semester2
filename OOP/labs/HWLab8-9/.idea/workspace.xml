@@ -1,0 +1,799 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true" buildAllGenerated="true">
+    <generated>
+      <config projectName="HWLab8_9" targetName="HWLab8_9" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7415375f-8c73-43fd-8291-0d98842f3595" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../GRAPHS/PracticalWork1/my_graph.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/headers/UndoAction.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/headers/UndoAdd.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/headers/UndoRemove.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/headers/UndoUpdate.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/UndoAdd.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/UndoRemove.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/UndoUpdate.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab10QT/Lab10QT.pro" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab10QT/main.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab10QT/mainwindow.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab10QT/mainwindow.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab10QT/mainwindow.ui" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TestW11/.idea/TestW11.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TestW11/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TestW11/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TestW11/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TestW11/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TestW11/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TestW11/controller/Controller.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TestW11/domain/Repo.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TestW11/headers/Controller.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TestW11/headers/Rectangle.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TestW11/headers/Repo.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TestW11/headers/Shape.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TestW11/headers/Triangle.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TestW11/headers/UI.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TestW11/main.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TestW11/models/Canvas.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TestW11/models/Rectangle.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TestW11/models/Shape.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TestW11/models/Triangle.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TestW11/ui/UI.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TestW8/.idea/TestW8.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TestW8/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TestW8/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TestW8/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TestW8/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TestW8/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TestW8/controllers/Controller.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TestW8/domain/RepoMemory.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TestW8/domain/models/MemoryAllocation.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TestW8/headers/Controller.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TestW8/headers/MemoryAllocation.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TestW8/headers/RepoMemory.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TestW8/headers/UI.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TestW8/main.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TestW8/ui/UI.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../GRAPHS/PracticalWork1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../GRAPHS/PracticalWork1/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../GRAPHS/PracticalWork1/directed_graph.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../GRAPHS/PracticalWork1/directed_graph.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../GRAPHS/PracticalWork1/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../GRAPHS/PracticalWork1/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../GRAPHS/PracticalWork1/ui.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../GRAPHS/PracticalWork1/ui.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../GRAPHS/PracticalWork1/venv/Lib/site-packages/networkx/readwrite/json_graph/node_link.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../GRAPHS/PracticalWork1/venv/Lib/site-packages/networkx/readwrite/json_graph/tests/test_node_link.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../GRAPHS/PracticalWork1/venv/share/doc/networkx-2.1/examples/drawing/plot_node_colormap.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../GRAPHS/PracticalWork2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../GRAPHS/PracticalWork2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../GRAPHS/PracticalWork2/directed_graph.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../GRAPHS/PracticalWork2/directed_graph.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../GRAPHS/PracticalWork2/g_small.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../GRAPHS/PracticalWork2/g_small.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../GRAPHS/PracticalWork2/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../GRAPHS/PracticalWork2/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../GRAPHS/PracticalWork2/ui.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../GRAPHS/PracticalWork2/ui.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/Controller.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/Controller.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/CSVRepo.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/domain/CSVRepo.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/headers/CSVRepo.h" beforeDir="false" afterPath="$PROJECT_DIR$/headers/CSVRepo.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/headers/Controller.h" beforeDir="false" afterPath="$PROJECT_DIR$/headers/Controller.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/UI.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ui/UI.cpp" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="UI.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ui/UI.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3366">
+              <caret line="153" column="32" selection-start-line="153" selection-start-column="32" selection-end-line="153" selection-end-column="32" />
+              <folding>
+                <element signature="e#42#68#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Repo.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/domain/Repo.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="88">
+              <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Repo.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/headers/Repo.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="132">
+              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Playlist.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/domain/Playlist.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="572">
+              <caret line="26" column="40" selection-start-line="26" selection-start-column="40" selection-end-line="26" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CSVRepo.cpp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/domain/CSVRepo.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="418">
+              <caret line="19" column="30" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
+              <folding>
+                <element signature="e#42#60#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Tutorial.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/domain/models/Tutorial.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="88">
+              <caret line="4" column="9" lean-forward="true" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
+              <folding>
+                <element signature="e#42#61#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CSVRepo.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/headers/CSVRepo.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="924">
+              <caret line="42" column="13" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="13" />
+              <folding>
+                <element signature="e#55#72#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>com</find>
+      <find>yt.c</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>c</replace>
+      <replace>Title</replace>
+      <replace>Presenter</replace>
+      <replace>youtube.com</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/CoverageTests.h" />
+        <option value="$PROJECT_DIR$/CSVRepo.h" />
+        <option value="$PROJECT_DIR$/UI.h" />
+        <option value="$PROJECT_DIR$/Controller.h" />
+        <option value="$PROJECT_DIR$/Controller.cpp" />
+        <option value="$PROJECT_DIR$/utils/Utils.cpp" />
+        <option value="$PROJECT_DIR$/headers/Utils.h" />
+        <option value="$PROJECT_DIR$/validators/Validators.h" />
+        <option value="$PROJECT_DIR$/validators/ValidateOption.cpp" />
+        <option value="$PROJECT_DIR$/domain/models/Repo.cpp" />
+        <option value="$PROJECT_DIR$/domain/models/Duration.h" />
+        <option value="$PROJECT_DIR$/headers/Validators.h" />
+        <option value="$PROJECT_DIR$/headers/UI.h" />
+        <option value="$PROJECT_DIR$/domain/Repo.cpp" />
+        <option value="$PROJECT_DIR$/headers/CoverageTests.h" />
+        <option value="$PROJECT_DIR$/headers/Repo.h" />
+        <option value="$PROJECT_DIR$/headers/Tutorial.h" />
+        <option value="$PROJECT_DIR$/headers/Duration.h" />
+        <option value="$PROJECT_DIR$/domain/models/Duration.cpp" />
+        <option value="$PROJECT_DIR$/repo_csv_test.csv" />
+        <option value="$PROJECT_DIR$/repo_csv.csv" />
+        <option value="$PROJECT_DIR$/playlist.csv" />
+        <option value="$PROJECT_DIR$/domain/models/Tutorial.cpp" />
+        <option value="$PROJECT_DIR$/domain/Playlist.cpp" />
+        <option value="$PROJECT_DIR$/headers/Playlist.h" />
+        <option value="$PROJECT_DIR$/CoverageTests.cpp" />
+        <option value="$PROJECT_DIR$/validators/Validators.cpp" />
+        <option value="$PROJECT_DIR$/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/utils/UndoAction.h" />
+        <option value="$PROJECT_DIR$/utils/UndoAdd.h" />
+        <option value="$PROJECT_DIR$/utils/UndoRemove.h" />
+        <option value="$PROJECT_DIR$/utils/UndoUpdate.h" />
+        <option value="$PROJECT_DIR$/headers/UndoAction.h" />
+        <option value="$PROJECT_DIR$/utils/UndoAdd.cpp" />
+        <option value="$PROJECT_DIR$/headers/UndoRemove.h" />
+        <option value="$PROJECT_DIR$/utils/UndoRemove.cpp" />
+        <option value="$PROJECT_DIR$/headers/UndoUpdate.h" />
+        <option value="$PROJECT_DIR$/utils/UndoUpdate.cpp" />
+        <option value="$PROJECT_DIR$/headers/Controller.h" />
+        <option value="$PROJECT_DIR$/headers/CSVRepo.h" />
+        <option value="$PROJECT_DIR$/headers/UndoAdd.h" />
+        <option value="$PROJECT_DIR$/domain/CSVRepo.cpp" />
+        <option value="$PROJECT_DIR$/controllers/Controller.cpp" />
+        <option value="$PROJECT_DIR$/ui/UI.cpp" />
+        <option value="$PROJECT_DIR$/main.cpp" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="960" />
+    <option name="y" value="24" />
+    <option name="width" value="960" />
+    <option name="height" value="987" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="HWLab8_9" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HWLab8-9" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HWLab8_9" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HWLab8-9" type="462c0819:PsiDirectoryNode" />
+              <item name="domain" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HWLab8_9" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HWLab8-9" type="462c0819:PsiDirectoryNode" />
+              <item name="ui" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HWLab8_9" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HWLab8-9" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/headers" />
+      <recent name="$PROJECT_DIR$/domain" />
+      <recent name="$PROJECT_DIR$/controllers" />
+      <recent name="$PROJECT_DIR$/ui" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.HWLab8_9">
+    <configuration name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="HWLab8_9" RUN_TARGET_NAME="HWLab8_9" EXPLICIT_BUILD_TARGET_NAME="all" />
+    <configuration name="HWLab8_9" type="CMakeRunConfiguration" factoryName="Application" singleton="true" PASS_PARENT_ENVS_2="true" PROJECT_NAME="HWLab8_9" TARGET_NAME="HWLab8_9" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="HWLab8_9" RUN_TARGET_NAME="HWLab8_9" />
+    <list>
+      <item itemvalue="Application.Build All" />
+      <item itemvalue="Application.HWLab8_9" />
+    </list>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7415375f-8c73-43fd-8291-0d98842f3595" name="Default" comment="" />
+      <created>1523035030058</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1523035030058</updated>
+      <workItem from="1523035031552" duration="1816000" />
+      <workItem from="1523263279143" duration="19621000" />
+      <workItem from="1523298022452" duration="3244000" />
+      <workItem from="1523353334231" duration="8077000" />
+      <workItem from="1523370348490" duration="558000" />
+      <workItem from="1523371111284" duration="7722000" />
+      <workItem from="1523441868406" duration="1910000" />
+      <workItem from="1523546959159" duration="75000" />
+      <workItem from="1523547105677" duration="840000" />
+      <workItem from="1523549108277" duration="63000" />
+      <workItem from="1523550226243" duration="829000" />
+      <workItem from="1523552086021" duration="1538000" />
+      <workItem from="1523795997361" duration="945000" />
+      <workItem from="1523815310928" duration="2000" />
+      <workItem from="1524082595029" duration="1605000" />
+      <workItem from="1524554655825" duration="4083000" />
+      <workItem from="1524643830868" duration="11000" />
+      <workItem from="1524655711893" duration="41000" />
+      <workItem from="1524728235763" duration="1312000" />
+      <workItem from="1525181011871" duration="8000" />
+      <workItem from="1525207771438" duration="2000" />
+      <workItem from="1525333364253" duration="1559000" />
+      <workItem from="1525808476209" duration="120000" />
+      <workItem from="1526541293801" duration="4885000" />
+      <workItem from="1527059325659" duration="3000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="60869000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-1" y="-11" width="1922" height="1023" extended-state="6" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19883966" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="CMake" order="11" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.3295583" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.81498295" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32942554" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.5459705" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32690126" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3291714" />
+    </layout>
+    <layout-to-restore>
+      <window_info anchor="bottom" id="CMake" order="11" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19883966" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.42678773" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.5459705" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32942554" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.3295583" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3291714" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32690126" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/ui/UI.cpp</url>
+          <line>225</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="24" />
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="32" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CodeCoverage.cmake">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1276">
+          <caret line="58" column="1" selection-start-line="58" selection-start-column="1" selection-end-line="58" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CoverageTests.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="36" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/headers/CoverageTests.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/c++/5/ostream">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="587" column="45" lean-forward="true" selection-start-line="587" selection-start-column="45" selection-end-line="587" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/headers/Utils.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/validators/ValidateOption.cpp" />
+    <entry file="file://$PROJECT_DIR$/utils/Utils.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/string.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-528" />
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/c++/5/string">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="296">
+          <caret line="37" column="9" lean-forward="true" selection-start-line="37" selection-start-column="9" selection-end-line="37" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/c++/5/bits/stringfwd.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="73" column="32" selection-start-line="73" selection-start-column="32" selection-end-line="73" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/headers/Validators.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="23" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/c++/5/iostream">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="59" column="17" selection-start-line="59" selection-start-column="17" selection-end-line="59" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/c++/5/bits/istream.tcc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="459" column="4" selection-start-line="459" selection-start-column="4" selection-end-line="459" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/headers/UI.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/c++/5/bits/predefined_ops.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5126">
+          <caret line="233" column="32" selection-start-line="233" selection-start-column="32" selection-end-line="233" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/c++/5/bits/stl_algo.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="98">
+          <caret line="716" column="57" lean-forward="true" selection-start-line="716" selection-start-column="57" selection-end-line="716" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/domain/models/Duration.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="748">
+          <caret line="34" column="28" selection-start-line="34" selection-start-column="28" selection-end-line="34" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/c++/5/fstream">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="626" column="33" lean-forward="true" selection-start-line="626" selection-start-column="33" selection-end-line="626" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/headers/Duration.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="19" column="15" selection-start-line="19" selection-start-column="15" selection-end-line="19" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/c++/5/bits/move.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="100" column="4" selection-start-line="100" selection-start-column="4" selection-end-line="100" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/repo_csv.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/c++/5/bits/stl_vector.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="656" column="50" selection-start-line="656" selection-start-column="50" selection-end-line="656" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/c++/5/bits/vector.tcc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="122">
+          <caret line="93" selection-start-line="93" selection-end-line="93" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/repo_csv_test.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/headers/Playlist.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="25" column="28" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/validators/Validators.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CodeCoverage.cmake">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3367">
+          <caret line="58" column="1" selection-start-line="58" selection-start-column="1" selection-end-line="58" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/headers/Tutorial.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/headers/UndoAction.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="17" lean-forward="true" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/UndoAdd.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="88" selection-start-line="7" selection-start-column="88" selection-end-line="7" selection-end-column="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/UndoUpdate.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/UndoRemove.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="49" selection-start-line="7" selection-start-column="49" selection-end-line="7" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/headers/UndoUpdate.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="2" lean-forward="true" selection-start-column="2" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/headers/UndoRemove.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" column="12" lean-forward="true" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/headers/UndoAdd.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="15" selection-start-line="9" selection-start-column="15" selection-end-line="9" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/headers/Controller.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="704">
+          <caret line="32" column="9" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/headers/CoverageTests.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CoverageTests.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="70" column="49" selection-start-line="70" selection-start-column="49" selection-end-line="70" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/Controller.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="428">
+          <caret line="46" selection-start-line="46" selection-end-line="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ui/UI.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3366">
+          <caret line="153" column="32" selection-start-line="153" selection-start-column="32" selection-end-line="153" selection-end-column="32" />
+          <folding>
+            <element signature="e#42#68#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/domain/Playlist.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="572">
+          <caret line="26" column="40" selection-start-line="26" selection-start-column="40" selection-end-line="26" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/headers/Repo.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/domain/Repo.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/c++/5/iosfwd">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="131" column="32" selection-start-line="131" selection-start-column="32" selection-end-line="131" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/headers/CSVRepo.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="924">
+          <caret line="42" column="13" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="13" />
+          <folding>
+            <element signature="e#55#72#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/domain/models/Tutorial.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="9" lean-forward="true" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
+          <folding>
+            <element signature="e#42#61#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/domain/CSVRepo.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="19" column="30" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
+          <folding>
+            <element signature="e#42#60#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

@@ -144,10 +144,19 @@ class UI(object):
 
         components = {}
         for vertex in graph.verticesList:
-            bfsRez = graph.bfs(vertex)
-            components[tuple(bfsRez)] = 1
+            for key in components.keys():
+                bfsRez = graph.bfs(vertex)
+                components[tuple(bfsRez)] = 1
 
         for component in components.keys():
             print(*component)
-        print("\nNumber of connected components: ", len(components))
+            toPrint = set()
+            for node in component:
+                for nodeOut in graph.graphOut[node]:
+                    if tuple([nodeOut, node]) not in toPrint:
+                        toPrint.add(tuple([node, nodeOut]))
 
+            if len(toPrint) != 0:
+                print("Component starting with node:", component[0], "->", *toPrint)
+
+        print("\nNumber of connected components: ", len(components))

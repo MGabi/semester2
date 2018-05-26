@@ -12,11 +12,7 @@ Requirements:
     DONE - get the endpoints of an edge specified by an Edge_id (if applicable);
     DONE - retrieve or modify the information (the integer) attached to a specified edge.
 """
-from copy import deepcopy
-
-import matplotlib.pyplot as plt
-import networkx as nx
-import numpy
+import heapq
 
 
 class DirectedGraph(object):
@@ -29,6 +25,7 @@ class DirectedGraph(object):
         self.__graphOut = {}
         self.__costs = {}
         self.__edgeIDs = {}
+        self.__edgesList = []
         self.readGraph(fileName)
 
     def readGraph(self, fileName):
@@ -65,8 +62,10 @@ class DirectedGraph(object):
         if self.vertexExists(vertexStart) and self.vertexExists(vertexEnd):
             if not self.isEdge(vertexStart, vertexEnd):
                 if id not in self.__edgeIDs.keys():
+                    self.__edgesList.append(Edge(vertexStart, vertexEnd, cost, id))
+                    #self.__edgesList.append(Edge(vertexEnd, vertexStart, cost, id))
                     self.__graphOut[vertexStart].append(vertexEnd)
-                    self.__graphIn[vertexEnd].append(vertexStart)
+                    #self.__graphIn[vertexEnd].append(vertexStart)
                     self.__costs[vertexStart, vertexEnd] = cost
                     self.__edgeIDs[id] = [vertexStart, vertexEnd]
                 else:
@@ -96,6 +95,20 @@ class DirectedGraph(object):
             return self.__costs[tuple(self.__edgeIDs[edgeID])]
         else:
             raise Exception("Edge with id {0} does not exists!".format(edgeID))
+
+    def getCostOfEdge(self, vStart, vEnd):
+        c1 = None
+        c2 = None
+        c1 = self.__costs.get(tuple([vStart, vEnd]))
+        c2 = self.__costs.get(tuple([vEnd, vStart]))
+
+        if c1 != None:
+            return c1
+
+        if c2 != None:
+            return c2
+
+        return None
 
     def modifyCostOf(self, edgeID, newCost):
         if self.edgeIDExists(edgeID):
@@ -131,16 +144,16 @@ class DirectedGraph(object):
     def inboundEdgesOf(self, vertex):
         return self.__graphIn[vertex]
 
-    def showGraph(self):
-        g = nx.DiGraph()
-
-        for k, v in self.__graphOut.items():
-            for el in v:
-                g.add_edge(k, el)
-
-        nx.draw(g, with_labels=True)
-        plt.draw()
-        plt.show()
+    # def showGraph(self):
+    #     g = nx.DiGraph()
+    #
+    #     for k, v in self.__graphOut.items():
+    #         for el in v:
+    #             g.add_edge(k, el)
+    #
+    #     nx.draw(g, with_labels=True)
+    #     plt.draw()
+    #     plt.show()
 
     def isolatedNodes(self):
         isolated = []
@@ -160,6 +173,47 @@ class DirectedGraph(object):
         self.graphOut.pop(vertex)
         self.graphIn.pop(vertex)
         self.vertices = -1
+
+    def dijkstra(self, start, end):
+        prev = {}
+        q = PriorityQueue()
+        q.add(start, 0)
+
+        cost = [100000000] * self.vertices
+        cost[start] = 0
+
+        while not q.isEmpty():
+            x = q.pop()
+            for node in self.graphOut[x]:
+                if cost[node] > cost[x] + self.getCostOfEdge(x, node):
+                    cost[node] = cost[x] + self.getCostOfEdge(x, node)
+                    q.add(node, cost[node])
+                    prev[node] = x
+        return cost, prev
+
+
+    def predecessors(self):
+        s = []
+        queue = PriorityQueue()
+        count = {}
+
+        for x in self.graphIn.keys():
+            count[x] = len(self.graphIn[x])
+            if count[x] == 0:
+                queue.add(x, 0)
+
+        while not queue.isEmpty():
+            x = queue.pop()
+            s.append(x)
+            for y in self.graphOut[x]:
+                count[y] = count[y] - 1
+                if count[y] == 0:
+                    queue.add(y, 0)
+
+        if len(s) < len(self.verticesList):
+            s.clear()
+
+        return s
 
     @property
     def verticesList(self):
@@ -216,3 +270,28 @@ class Edge(object):
     @property
     def ID(self):
         return self.__ID
+
+
+class PriorityQueue:
+    def __init__(self):
+        self.__values = {}
+
+    def isEmpty(self):
+        return len(self.__values) == 0
+
+    def pop(self):
+        topPriority = None
+        topObject = None
+        for obj in self.__values:
+            objPriority = self.__values[obj]
+            if topPriority is None or topPriority > objPriority:
+                topPriority = objPriority
+                topObject = obj
+        del self.__values[topObject]
+        return topObject
+
+    def add(self, obj, priority):
+        self.__values[obj] = priority
+
+    def contains(self, val):
+        return val in self.__values

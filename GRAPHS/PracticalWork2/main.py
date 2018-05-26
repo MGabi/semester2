@@ -10,12 +10,12 @@ from ui import UI
 
 
 def main():
-    #graph = UndirectedGraph("graph_data.txt")
     graph = UndirectedGraph("graph_data.txt")
+    # graph = UndirectedGraph("g_small.txt")
     #graph.showGraph()
     # for edge, neigh in graph.edgeIDs.items():
     #     print(edge, neigh)
-    #print("Isolated nodes: ", len(graph.isolatedNodes()))
+    print("Isolated nodes: ", len(graph.isolatedNodes()))
     cmdDict = {0: UI.exitApp,
                1: UI.nrOfVertices,
                2: UI.edgeBetween,
@@ -39,7 +39,7 @@ def main():
             cmd = UI.readCommand()
             cmdDict[cmd](graph)
         except Exception as ex:
-            traceback.print_exc()
+            traceback.print_stack()
             print(ex)
 
 main()
