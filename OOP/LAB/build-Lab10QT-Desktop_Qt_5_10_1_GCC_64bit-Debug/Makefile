@@ -12,10 +12,10 @@ MAKEFILE      = Makefile
 
 CC            = gcc
 CXX           = g++
-DEFINES       = -DQT_DEPRECATED_WARNINGS -DQT_QML_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB
+DEFINES       = -DQT_DEPRECATED_WARNINGS -DQT_QML_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SQL_LIB -DQT_CORE_LIB
 CFLAGS        = -pipe -g -Wall -W -D_REENTRANT -fPIC $(DEFINES)
 CXXFLAGS      = -pipe -g -std=gnu++11 -Wall -W -D_REENTRANT -fPIC $(DEFINES)
-INCPATH       = -I../Lab10QT -I. -I/home/mgabi/IDEs/QT/5.10.1/gcc_64/include -I/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtWidgets -I/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtGui -I/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore -I. -isystem /usr/include/libdrm -I. -I/home/mgabi/IDEs/QT/5.10.1/gcc_64/mkspecs/linux-g++
+INCPATH       = -I../Lab10QT -I. -I/home/mgabi/IDEs/QT/5.10.1/gcc_64/include -I/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtWidgets -I/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtGui -I/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtSql -I/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore -I. -isystem /usr/include/libdrm -I. -I/home/mgabi/IDEs/QT/5.10.1/gcc_64/mkspecs/linux-g++
 QMAKE         = /home/mgabi/IDEs/QT/5.10.1/gcc_64/bin/qmake
 DEL_FILE      = rm -f
 CHK_DIR_EXISTS= test -d
@@ -38,7 +38,7 @@ DISTNAME      = Lab10QT1.0.0
 DISTDIR = /home/mgabi/Workspace/UBB/SEM2/OOP/LAB/build-Lab10QT-Desktop_Qt_5_10_1_GCC_64bit-Debug/.tmp/Lab10QT1.0.0
 LINK          = g++
 LFLAGS        = -Wl,-rpath,/home/mgabi/IDEs/QT/5.10.1/gcc_64/lib
-LIBS          = $(SUBLIBS) -L/home/mgabi/IDEs/QT/5.10.1/gcc_64/lib -lQt5Widgets -lQt5Gui -lQt5Core -lGL -lpthread 
+LIBS          = $(SUBLIBS) -L/home/mgabi/IDEs/QT/5.10.1/gcc_64/lib -lQt5Widgets -lQt5Gui -lQt5Sql -lQt5Core -lGL -lpthread 
 AR            = ar cqs
 RANLIB        = 
 SED           = sed
@@ -51,10 +51,36 @@ OBJECTS_DIR   = ./
 ####### Files
 
 SOURCES       = ../Lab10QT/main.cpp \
-		../Lab10QT/mainwindow.cpp moc_mainwindow.cpp
+		../Lab10QT/mainwindow.cpp \
+		../Lab10QT/administratorwindow.cpp \
+		../Lab10QT/Controller.cpp \
+		../Lab10QT/CSVRepo.cpp \
+		../Lab10QT/Duration.cpp \
+		../Lab10QT/Playlist.cpp \
+		../Lab10QT/Repo.cpp \
+		../Lab10QT/Tutorial.cpp \
+		../Lab10QT/Utils.cpp \
+		../Lab10QT/Validators.cpp \
+		../Lab10QT/CoverageTests.cpp \
+		../Lab10QT/TutorialsModel.cpp moc_mainwindow.cpp \
+		moc_administratorwindow.cpp \
+		moc_TutorialsModel.cpp
 OBJECTS       = main.o \
 		mainwindow.o \
-		moc_mainwindow.o
+		administratorwindow.o \
+		Controller.o \
+		CSVRepo.o \
+		Duration.o \
+		Playlist.o \
+		Repo.o \
+		Tutorial.o \
+		Utils.o \
+		Validators.o \
+		CoverageTests.o \
+		TutorialsModel.o \
+		moc_mainwindow.o \
+		moc_administratorwindow.o \
+		moc_TutorialsModel.o
 DIST          = /home/mgabi/IDEs/QT/5.10.1/gcc_64/mkspecs/features/spec_pre.prf \
 		/home/mgabi/IDEs/QT/5.10.1/gcc_64/mkspecs/common/unix.conf \
 		/home/mgabi/IDEs/QT/5.10.1/gcc_64/mkspecs/common/linux.conf \
@@ -218,6 +244,7 @@ DIST          = /home/mgabi/IDEs/QT/5.10.1/gcc_64/mkspecs/features/spec_pre.prf 
 		/home/mgabi/IDEs/QT/5.10.1/gcc_64/mkspecs/features/qt_config.prf \
 		/home/mgabi/IDEs/QT/5.10.1/gcc_64/mkspecs/linux-g++/qmake.conf \
 		/home/mgabi/IDEs/QT/5.10.1/gcc_64/mkspecs/features/spec_post.prf \
+		../Lab10QT/.qmake.stash \
 		/home/mgabi/IDEs/QT/5.10.1/gcc_64/mkspecs/features/exclusive_builds.prf \
 		/home/mgabi/IDEs/QT/5.10.1/gcc_64/mkspecs/features/toolchain.prf \
 		/home/mgabi/IDEs/QT/5.10.1/gcc_64/mkspecs/features/default_pre.prf \
@@ -237,8 +264,30 @@ DIST          = /home/mgabi/IDEs/QT/5.10.1/gcc_64/mkspecs/features/spec_pre.prf 
 		/home/mgabi/IDEs/QT/5.10.1/gcc_64/mkspecs/features/exceptions.prf \
 		/home/mgabi/IDEs/QT/5.10.1/gcc_64/mkspecs/features/yacc.prf \
 		/home/mgabi/IDEs/QT/5.10.1/gcc_64/mkspecs/features/lex.prf \
-		../Lab10QT/Lab10QT.pro ../Lab10QT/mainwindow.h ../Lab10QT/main.cpp \
-		../Lab10QT/mainwindow.cpp
+		../Lab10QT/Lab10QT.pro ../Lab10QT/mainwindow.h \
+		../Lab10QT/administratorwindow.h \
+		../Lab10QT/CoverageTests.h \
+		../Lab10QT/Controller.h \
+		../Lab10QT/CSVRepo.h \
+		../Lab10QT/Duration.h \
+		../Lab10QT/Playlist.h \
+		../Lab10QT/Repo.h \
+		../Lab10QT/Tutorial.h \
+		../Lab10QT/Utils.h \
+		../Lab10QT/Validators.h \
+		../Lab10QT/TutorialsModel.h ../Lab10QT/main.cpp \
+		../Lab10QT/mainwindow.cpp \
+		../Lab10QT/administratorwindow.cpp \
+		../Lab10QT/Controller.cpp \
+		../Lab10QT/CSVRepo.cpp \
+		../Lab10QT/Duration.cpp \
+		../Lab10QT/Playlist.cpp \
+		../Lab10QT/Repo.cpp \
+		../Lab10QT/Tutorial.cpp \
+		../Lab10QT/Utils.cpp \
+		../Lab10QT/Validators.cpp \
+		../Lab10QT/CoverageTests.cpp \
+		../Lab10QT/TutorialsModel.cpp
 QMAKE_TARGET  = Lab10QT
 DESTDIR       = 
 TARGET        = Lab10QT
@@ -247,7 +296,7 @@ TARGET        = Lab10QT
 first: all
 ####### Build rules
 
-$(TARGET): ui_mainwindow.h $(OBJECTS)  
+$(TARGET): ui_mainwindow.h ui_administratorwindow.h $(OBJECTS)  
 	$(LINK) $(LFLAGS) -o $(TARGET) $(OBJECTS) $(OBJCOMP) $(LIBS)
 
 Makefile: ../Lab10QT/Lab10QT.pro /home/mgabi/IDEs/QT/5.10.1/gcc_64/mkspecs/linux-g++/qmake.conf /home/mgabi/IDEs/QT/5.10.1/gcc_64/mkspecs/features/spec_pre.prf \
@@ -413,6 +462,7 @@ Makefile: ../Lab10QT/Lab10QT.pro /home/mgabi/IDEs/QT/5.10.1/gcc_64/mkspecs/linux
 		/home/mgabi/IDEs/QT/5.10.1/gcc_64/mkspecs/features/qt_config.prf \
 		/home/mgabi/IDEs/QT/5.10.1/gcc_64/mkspecs/linux-g++/qmake.conf \
 		/home/mgabi/IDEs/QT/5.10.1/gcc_64/mkspecs/features/spec_post.prf \
+		.qmake.stash \
 		/home/mgabi/IDEs/QT/5.10.1/gcc_64/mkspecs/features/exclusive_builds.prf \
 		/home/mgabi/IDEs/QT/5.10.1/gcc_64/mkspecs/features/toolchain.prf \
 		/home/mgabi/IDEs/QT/5.10.1/gcc_64/mkspecs/features/default_pre.prf \
@@ -435,6 +485,7 @@ Makefile: ../Lab10QT/Lab10QT.pro /home/mgabi/IDEs/QT/5.10.1/gcc_64/mkspecs/linux
 		../Lab10QT/Lab10QT.pro \
 		/home/mgabi/IDEs/QT/5.10.1/gcc_64/lib/libQt5Widgets.prl \
 		/home/mgabi/IDEs/QT/5.10.1/gcc_64/lib/libQt5Gui.prl \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/lib/libQt5Sql.prl \
 		/home/mgabi/IDEs/QT/5.10.1/gcc_64/lib/libQt5Core.prl
 	$(QMAKE) -o Makefile ../Lab10QT/Lab10QT.pro -spec linux-g++ CONFIG+=debug CONFIG+=qml_debug
 /home/mgabi/IDEs/QT/5.10.1/gcc_64/mkspecs/features/spec_pre.prf:
@@ -600,6 +651,7 @@ Makefile: ../Lab10QT/Lab10QT.pro /home/mgabi/IDEs/QT/5.10.1/gcc_64/mkspecs/linux
 /home/mgabi/IDEs/QT/5.10.1/gcc_64/mkspecs/features/qt_config.prf:
 /home/mgabi/IDEs/QT/5.10.1/gcc_64/mkspecs/linux-g++/qmake.conf:
 /home/mgabi/IDEs/QT/5.10.1/gcc_64/mkspecs/features/spec_post.prf:
+.qmake.stash:
 /home/mgabi/IDEs/QT/5.10.1/gcc_64/mkspecs/features/exclusive_builds.prf:
 /home/mgabi/IDEs/QT/5.10.1/gcc_64/mkspecs/features/toolchain.prf:
 /home/mgabi/IDEs/QT/5.10.1/gcc_64/mkspecs/features/default_pre.prf:
@@ -622,6 +674,7 @@ Makefile: ../Lab10QT/Lab10QT.pro /home/mgabi/IDEs/QT/5.10.1/gcc_64/mkspecs/linux
 ../Lab10QT/Lab10QT.pro:
 /home/mgabi/IDEs/QT/5.10.1/gcc_64/lib/libQt5Widgets.prl:
 /home/mgabi/IDEs/QT/5.10.1/gcc_64/lib/libQt5Gui.prl:
+/home/mgabi/IDEs/QT/5.10.1/gcc_64/lib/libQt5Sql.prl:
 /home/mgabi/IDEs/QT/5.10.1/gcc_64/lib/libQt5Core.prl:
 qmake: FORCE
 	@$(QMAKE) -o Makefile ../Lab10QT/Lab10QT.pro -spec linux-g++ CONFIG+=debug CONFIG+=qml_debug
@@ -638,9 +691,9 @@ distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
 	$(COPY_FILE) --parents /home/mgabi/IDEs/QT/5.10.1/gcc_64/mkspecs/features/data/dummy.cpp $(DISTDIR)/
-	$(COPY_FILE) --parents ../Lab10QT/mainwindow.h $(DISTDIR)/
-	$(COPY_FILE) --parents ../Lab10QT/main.cpp ../Lab10QT/mainwindow.cpp $(DISTDIR)/
-	$(COPY_FILE) --parents ../Lab10QT/mainwindow.ui $(DISTDIR)/
+	$(COPY_FILE) --parents ../Lab10QT/mainwindow.h ../Lab10QT/administratorwindow.h ../Lab10QT/CoverageTests.h ../Lab10QT/Controller.h ../Lab10QT/CSVRepo.h ../Lab10QT/Duration.h ../Lab10QT/Playlist.h ../Lab10QT/Repo.h ../Lab10QT/Tutorial.h ../Lab10QT/Utils.h ../Lab10QT/Validators.h ../Lab10QT/TutorialsModel.h $(DISTDIR)/
+	$(COPY_FILE) --parents ../Lab10QT/main.cpp ../Lab10QT/mainwindow.cpp ../Lab10QT/administratorwindow.cpp ../Lab10QT/Controller.cpp ../Lab10QT/CSVRepo.cpp ../Lab10QT/Duration.cpp ../Lab10QT/Playlist.cpp ../Lab10QT/Repo.cpp ../Lab10QT/Tutorial.cpp ../Lab10QT/Utils.cpp ../Lab10QT/Validators.cpp ../Lab10QT/CoverageTests.cpp ../Lab10QT/TutorialsModel.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents ../Lab10QT/mainwindow.ui ../Lab10QT/administratorwindow.ui $(DISTDIR)/
 
 
 clean: compiler_clean 
@@ -672,9 +725,9 @@ compiler_moc_predefs_clean:
 moc_predefs.h: /home/mgabi/IDEs/QT/5.10.1/gcc_64/mkspecs/features/data/dummy.cpp
 	g++ -pipe -g -std=gnu++11 -Wall -W -dM -E -o moc_predefs.h /home/mgabi/IDEs/QT/5.10.1/gcc_64/mkspecs/features/data/dummy.cpp
 
-compiler_moc_header_make_all: moc_mainwindow.cpp
+compiler_moc_header_make_all: moc_mainwindow.cpp moc_administratorwindow.cpp moc_TutorialsModel.cpp
 compiler_moc_header_clean:
-	-$(DEL_FILE) moc_mainwindow.cpp
+	-$(DEL_FILE) moc_mainwindow.cpp moc_administratorwindow.cpp moc_TutorialsModel.cpp
 moc_mainwindow.cpp: /home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtWidgets/QMainWindow \
 		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtWidgets/qmainwindow.h \
 		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtWidgets/qtwidgetsglobal.h \
@@ -784,18 +837,209 @@ moc_mainwindow.cpp: /home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtWidgets/QMainWin
 		../Lab10QT/mainwindow.h \
 		moc_predefs.h \
 		/home/mgabi/IDEs/QT/5.10.1/gcc_64/bin/moc
-	/home/mgabi/IDEs/QT/5.10.1/gcc_64/bin/moc $(DEFINES) --include ./moc_predefs.h -I/home/mgabi/IDEs/QT/5.10.1/gcc_64/mkspecs/linux-g++ -I/home/mgabi/Workspace/UBB/SEM2/OOP/LAB/Lab10QT -I/home/mgabi/IDEs/QT/5.10.1/gcc_64/include -I/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtWidgets -I/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtGui -I/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore -I. -I/usr/include/c++/5 -I/usr/include/x86_64-linux-gnu/c++/5 -I/usr/include/c++/5/backward -I/usr/lib/gcc/x86_64-linux-gnu/5/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include ../Lab10QT/mainwindow.h -o moc_mainwindow.cpp
+	/home/mgabi/IDEs/QT/5.10.1/gcc_64/bin/moc $(DEFINES) --include ./moc_predefs.h -I/home/mgabi/IDEs/QT/5.10.1/gcc_64/mkspecs/linux-g++ -I/home/mgabi/Workspace/UBB/SEM2/OOP/LAB/Lab10QT -I/home/mgabi/IDEs/QT/5.10.1/gcc_64/include -I/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtWidgets -I/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtGui -I/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtSql -I/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore -I. -I/usr/include/c++/5 -I/usr/include/x86_64-linux-gnu/c++/5 -I/usr/include/c++/5/backward -I/usr/lib/gcc/x86_64-linux-gnu/5/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include ../Lab10QT/mainwindow.h -o moc_mainwindow.cpp
+
+moc_administratorwindow.cpp: /home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtWidgets/QWidget \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtWidgets/qwidget.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtWidgets/qtwidgetsglobal.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtGui/qtguiglobal.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qglobal.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qconfig-bootstrapped.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qconfig.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qtcore-config.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qsystemdetection.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qprocessordetection.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qcompilerdetection.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qtypeinfo.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qsysinfo.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qlogging.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qflags.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qatomic.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qbasicatomic.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qatomic_bootstrap.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qgenericatomic.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qatomic_cxx11.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qatomic_msvc.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qglobalstatic.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qmutex.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qnumeric.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qversiontagging.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtGui/qtgui-config.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtWidgets/qtwidgets-config.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtGui/qwindowdefs.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qobjectdefs.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qnamespace.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qobjectdefs_impl.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtGui/qwindowdefs_win.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qobject.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qstring.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qchar.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qbytearray.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qrefcount.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qarraydata.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qstringliteral.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qstringalgorithms.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qstringview.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qstringbuilder.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qlist.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qalgorithms.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qiterator.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qhashfunctions.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qpair.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qbytearraylist.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qstringlist.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qregexp.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qstringmatcher.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qcoreevent.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qscopedpointer.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qmetatype.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qvarlengtharray.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qcontainerfwd.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qobject_impl.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qmargins.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtGui/qpaintdevice.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qrect.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qsize.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qpoint.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtGui/qpalette.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtGui/qcolor.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtGui/qrgb.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtGui/qrgba64.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtGui/qbrush.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qvector.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtGui/qmatrix.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtGui/qpolygon.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtGui/qregion.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qdatastream.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qiodevice.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qline.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtGui/qtransform.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtGui/qpainterpath.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtGui/qimage.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtGui/qpixelformat.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtGui/qpixmap.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qsharedpointer.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qshareddata.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qhash.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qsharedpointer_impl.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtGui/qfont.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtGui/qfontmetrics.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtGui/qfontinfo.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtWidgets/qsizepolicy.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtGui/qcursor.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtGui/qkeysequence.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtGui/qevent.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qvariant.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qmap.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qdebug.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qtextstream.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qlocale.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qset.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qcontiguouscache.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qurl.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qurlquery.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qfile.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qfiledevice.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtGui/qvector2d.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtGui/qtouchdevice.h \
+		../Lab10QT/CSVRepo.h \
+		../Lab10QT/Repo.h \
+		../Lab10QT/Tutorial.h \
+		../Lab10QT/Duration.h \
+		../Lab10QT/UndoAction.h \
+		../Lab10QT/Controller.h \
+		../Lab10QT/Playlist.h \
+		../Lab10QT/administratorwindow.h \
+		moc_predefs.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/bin/moc
+	/home/mgabi/IDEs/QT/5.10.1/gcc_64/bin/moc $(DEFINES) --include ./moc_predefs.h -I/home/mgabi/IDEs/QT/5.10.1/gcc_64/mkspecs/linux-g++ -I/home/mgabi/Workspace/UBB/SEM2/OOP/LAB/Lab10QT -I/home/mgabi/IDEs/QT/5.10.1/gcc_64/include -I/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtWidgets -I/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtGui -I/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtSql -I/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore -I. -I/usr/include/c++/5 -I/usr/include/x86_64-linux-gnu/c++/5 -I/usr/include/c++/5/backward -I/usr/lib/gcc/x86_64-linux-gnu/5/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include ../Lab10QT/administratorwindow.h -o moc_administratorwindow.cpp
+
+moc_TutorialsModel.cpp: /home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/QAbstractTableModel \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qabstractitemmodel.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qvariant.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qatomic.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qglobal.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qconfig-bootstrapped.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qconfig.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qtcore-config.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qsystemdetection.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qprocessordetection.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qcompilerdetection.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qtypeinfo.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qsysinfo.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qlogging.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qflags.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qglobalstatic.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qmutex.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qnumeric.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qversiontagging.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qbasicatomic.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qatomic_bootstrap.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qgenericatomic.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qatomic_cxx11.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qatomic_msvc.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qbytearray.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qrefcount.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qnamespace.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qarraydata.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qlist.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qalgorithms.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qiterator.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qhashfunctions.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qstring.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qchar.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qstringliteral.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qstringalgorithms.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qstringview.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qstringbuilder.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qpair.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qbytearraylist.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qstringlist.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qregexp.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qstringmatcher.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qmetatype.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qvarlengtharray.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qcontainerfwd.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qobjectdefs.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qobjectdefs_impl.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qmap.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qdebug.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qhash.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qtextstream.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qiodevice.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qobject.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qcoreevent.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qscopedpointer.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qobject_impl.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qlocale.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qshareddata.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qvector.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qpoint.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qset.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qcontiguouscache.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qsharedpointer.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qsharedpointer_impl.h \
+		../Lab10QT/Tutorial.h \
+		../Lab10QT/Duration.h \
+		../Lab10QT/TutorialsModel.h \
+		moc_predefs.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/bin/moc
+	/home/mgabi/IDEs/QT/5.10.1/gcc_64/bin/moc $(DEFINES) --include ./moc_predefs.h -I/home/mgabi/IDEs/QT/5.10.1/gcc_64/mkspecs/linux-g++ -I/home/mgabi/Workspace/UBB/SEM2/OOP/LAB/Lab10QT -I/home/mgabi/IDEs/QT/5.10.1/gcc_64/include -I/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtWidgets -I/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtGui -I/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtSql -I/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore -I. -I/usr/include/c++/5 -I/usr/include/x86_64-linux-gnu/c++/5 -I/usr/include/c++/5/backward -I/usr/lib/gcc/x86_64-linux-gnu/5/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include ../Lab10QT/TutorialsModel.h -o moc_TutorialsModel.cpp
 
 compiler_moc_objc_header_make_all:
 compiler_moc_objc_header_clean:
 compiler_moc_source_make_all:
 compiler_moc_source_clean:
-compiler_uic_make_all: ui_mainwindow.h
+compiler_uic_make_all: ui_mainwindow.h ui_administratorwindow.h
 compiler_uic_clean:
-	-$(DEL_FILE) ui_mainwindow.h
+	-$(DEL_FILE) ui_mainwindow.h ui_administratorwindow.h
 ui_mainwindow.h: ../Lab10QT/mainwindow.ui \
 		/home/mgabi/IDEs/QT/5.10.1/gcc_64/bin/uic
 	/home/mgabi/IDEs/QT/5.10.1/gcc_64/bin/uic ../Lab10QT/mainwindow.ui -o ui_mainwindow.h
+
+ui_administratorwindow.h: ../Lab10QT/administratorwindow.ui \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/bin/uic
+	/home/mgabi/IDEs/QT/5.10.1/gcc_64/bin/uic ../Lab10QT/administratorwindow.ui -o ui_administratorwindow.h
 
 compiler_yacc_decl_make_all:
 compiler_yacc_decl_clean:
@@ -920,7 +1164,15 @@ main.o: ../Lab10QT/main.cpp ../Lab10QT/mainwindow.h \
 		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qeventloop.h \
 		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtWidgets/qdesktopwidget.h \
 		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtGui/qguiapplication.h \
-		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtGui/qinputmethod.h
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtGui/qinputmethod.h \
+		../Lab10QT/CSVRepo.h \
+		../Lab10QT/Repo.h \
+		../Lab10QT/Tutorial.h \
+		../Lab10QT/Duration.h \
+		../Lab10QT/UndoAction.h \
+		../Lab10QT/Playlist.h \
+		../Lab10QT/Controller.h \
+		../Lab10QT/CoverageTests.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o ../Lab10QT/main.cpp
 
 mainwindow.o: ../Lab10QT/mainwindow.cpp ../Lab10QT/mainwindow.h \
@@ -1030,11 +1282,347 @@ mainwindow.o: ../Lab10QT/mainwindow.cpp ../Lab10QT/mainwindow.h \
 		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtGui/qtouchdevice.h \
 		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtWidgets/qtabwidget.h \
 		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtGui/qicon.h \
-		ui_mainwindow.h
+		ui_mainwindow.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/QVariant \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtWidgets/QAction \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtWidgets/qaction.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtWidgets/qactiongroup.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtWidgets/QApplication \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtWidgets/qapplication.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qcoreapplication.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qeventloop.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtWidgets/qdesktopwidget.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtGui/qguiapplication.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtGui/qinputmethod.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtWidgets/QButtonGroup \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtWidgets/qbuttongroup.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtWidgets/QHeaderView \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtWidgets/qheaderview.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtWidgets/qabstractitemview.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtWidgets/qabstractscrollarea.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtWidgets/qframe.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qabstractitemmodel.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qitemselectionmodel.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtWidgets/qstyleoption.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtWidgets/qabstractspinbox.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtGui/qvalidator.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qregularexpression.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtWidgets/qslider.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtWidgets/qabstractslider.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtWidgets/qstyle.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtWidgets/qtabbar.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtWidgets/qrubberband.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtWidgets/QLabel \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtWidgets/qlabel.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtWidgets/QPushButton \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtWidgets/qpushbutton.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtWidgets/qabstractbutton.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtWidgets/QVBoxLayout \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtWidgets/qboxlayout.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtWidgets/qlayout.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtWidgets/qlayoutitem.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtWidgets/qgridlayout.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtWidgets/QWidget \
+		../Lab10QT/administratorwindow.h \
+		../Lab10QT/CSVRepo.h \
+		../Lab10QT/Repo.h \
+		../Lab10QT/Tutorial.h \
+		../Lab10QT/Duration.h \
+		../Lab10QT/UndoAction.h \
+		../Lab10QT/Controller.h \
+		../Lab10QT/Playlist.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o mainwindow.o ../Lab10QT/mainwindow.cpp
+
+administratorwindow.o: ../Lab10QT/administratorwindow.cpp ../Lab10QT/administratorwindow.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtWidgets/QWidget \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtWidgets/qwidget.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtWidgets/qtwidgetsglobal.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtGui/qtguiglobal.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qglobal.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qconfig-bootstrapped.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qconfig.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qtcore-config.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qsystemdetection.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qprocessordetection.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qcompilerdetection.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qtypeinfo.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qsysinfo.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qlogging.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qflags.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qatomic.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qbasicatomic.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qatomic_bootstrap.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qgenericatomic.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qatomic_cxx11.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qatomic_msvc.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qglobalstatic.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qmutex.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qnumeric.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qversiontagging.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtGui/qtgui-config.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtWidgets/qtwidgets-config.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtGui/qwindowdefs.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qobjectdefs.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qnamespace.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qobjectdefs_impl.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtGui/qwindowdefs_win.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qobject.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qstring.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qchar.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qbytearray.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qrefcount.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qarraydata.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qstringliteral.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qstringalgorithms.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qstringview.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qstringbuilder.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qlist.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qalgorithms.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qiterator.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qhashfunctions.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qpair.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qbytearraylist.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qstringlist.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qregexp.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qstringmatcher.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qcoreevent.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qscopedpointer.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qmetatype.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qvarlengtharray.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qcontainerfwd.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qobject_impl.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qmargins.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtGui/qpaintdevice.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qrect.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qsize.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qpoint.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtGui/qpalette.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtGui/qcolor.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtGui/qrgb.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtGui/qrgba64.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtGui/qbrush.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qvector.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtGui/qmatrix.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtGui/qpolygon.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtGui/qregion.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qdatastream.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qiodevice.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qline.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtGui/qtransform.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtGui/qpainterpath.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtGui/qimage.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtGui/qpixelformat.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtGui/qpixmap.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qsharedpointer.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qshareddata.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qhash.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qsharedpointer_impl.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtGui/qfont.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtGui/qfontmetrics.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtGui/qfontinfo.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtWidgets/qsizepolicy.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtGui/qcursor.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtGui/qkeysequence.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtGui/qevent.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qvariant.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qmap.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qdebug.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qtextstream.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qlocale.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qset.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qcontiguouscache.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qurl.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qurlquery.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qfile.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qfiledevice.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtGui/qvector2d.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtGui/qtouchdevice.h \
+		../Lab10QT/CSVRepo.h \
+		../Lab10QT/Repo.h \
+		../Lab10QT/Tutorial.h \
+		../Lab10QT/Duration.h \
+		../Lab10QT/UndoAction.h \
+		../Lab10QT/Controller.h \
+		../Lab10QT/Playlist.h \
+		ui_administratorwindow.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/QVariant \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtWidgets/QAction \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtWidgets/qaction.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtGui/qicon.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtWidgets/qactiongroup.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtWidgets/QApplication \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtWidgets/qapplication.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qcoreapplication.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qeventloop.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtWidgets/qdesktopwidget.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtGui/qguiapplication.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtGui/qinputmethod.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtWidgets/QButtonGroup \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtWidgets/qbuttongroup.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtWidgets/QHBoxLayout \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtWidgets/qboxlayout.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtWidgets/qlayout.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtWidgets/qlayoutitem.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtWidgets/qgridlayout.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtWidgets/QHeaderView \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtWidgets/qheaderview.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtWidgets/qabstractitemview.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtWidgets/qabstractscrollarea.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtWidgets/qframe.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qabstractitemmodel.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qitemselectionmodel.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtWidgets/qstyleoption.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtWidgets/qabstractspinbox.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtGui/qvalidator.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qregularexpression.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtWidgets/qslider.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtWidgets/qabstractslider.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtWidgets/qstyle.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtWidgets/qtabbar.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtWidgets/qtabwidget.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtWidgets/qrubberband.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtWidgets/QPushButton \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtWidgets/qpushbutton.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtWidgets/qabstractbutton.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtWidgets/QTableView \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtWidgets/qtableview.h \
+		../Lab10QT/TutorialsModel.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/QAbstractTableModel
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o administratorwindow.o ../Lab10QT/administratorwindow.cpp
+
+Controller.o: ../Lab10QT/Controller.cpp ../Lab10QT/Controller.h \
+		../Lab10QT/Repo.h \
+		../Lab10QT/Tutorial.h \
+		../Lab10QT/Duration.h \
+		../Lab10QT/CSVRepo.h \
+		../Lab10QT/UndoAction.h \
+		../Lab10QT/Playlist.h \
+		../Lab10QT/Validators.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o Controller.o ../Lab10QT/Controller.cpp
+
+CSVRepo.o: ../Lab10QT/CSVRepo.cpp ../Lab10QT/CSVRepo.h \
+		../Lab10QT/Repo.h \
+		../Lab10QT/Tutorial.h \
+		../Lab10QT/Duration.h \
+		../Lab10QT/UndoAction.h \
+		../Lab10QT/UndoAdd.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o CSVRepo.o ../Lab10QT/CSVRepo.cpp
+
+Duration.o: ../Lab10QT/Duration.cpp ../Lab10QT/Duration.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o Duration.o ../Lab10QT/Duration.cpp
+
+Playlist.o: ../Lab10QT/Playlist.cpp ../Lab10QT/Playlist.h \
+		../Lab10QT/Tutorial.h \
+		../Lab10QT/Duration.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o Playlist.o ../Lab10QT/Playlist.cpp
+
+Repo.o: ../Lab10QT/Repo.cpp ../Lab10QT/Repo.h \
+		../Lab10QT/Tutorial.h \
+		../Lab10QT/Duration.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o Repo.o ../Lab10QT/Repo.cpp
+
+Tutorial.o: ../Lab10QT/Tutorial.cpp ../Lab10QT/Tutorial.h \
+		../Lab10QT/Duration.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o Tutorial.o ../Lab10QT/Tutorial.cpp
+
+Utils.o: ../Lab10QT/Utils.cpp ../Lab10QT/Utils.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o Utils.o ../Lab10QT/Utils.cpp
+
+Validators.o: ../Lab10QT/Validators.cpp ../Lab10QT/Validators.h \
+		../Lab10QT/Tutorial.h \
+		../Lab10QT/Duration.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o Validators.o ../Lab10QT/Validators.cpp
+
+CoverageTests.o: ../Lab10QT/CoverageTests.cpp ../Lab10QT/CoverageTests.h \
+		../Lab10QT/Tutorial.h \
+		../Lab10QT/Duration.h \
+		../Lab10QT/CSVRepo.h \
+		../Lab10QT/Repo.h \
+		../Lab10QT/UndoAction.h \
+		../Lab10QT/Playlist.h \
+		../Lab10QT/Controller.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o CoverageTests.o ../Lab10QT/CoverageTests.cpp
+
+TutorialsModel.o: ../Lab10QT/TutorialsModel.cpp ../Lab10QT/TutorialsModel.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/QAbstractTableModel \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qabstractitemmodel.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qvariant.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qatomic.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qglobal.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qconfig-bootstrapped.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qconfig.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qtcore-config.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qsystemdetection.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qprocessordetection.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qcompilerdetection.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qtypeinfo.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qsysinfo.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qlogging.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qflags.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qglobalstatic.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qmutex.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qnumeric.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qversiontagging.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qbasicatomic.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qatomic_bootstrap.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qgenericatomic.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qatomic_cxx11.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qatomic_msvc.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qbytearray.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qrefcount.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qnamespace.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qarraydata.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qlist.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qalgorithms.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qiterator.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qhashfunctions.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qstring.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qchar.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qstringliteral.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qstringalgorithms.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qstringview.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qstringbuilder.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qpair.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qbytearraylist.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qstringlist.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qregexp.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qstringmatcher.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qmetatype.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qvarlengtharray.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qcontainerfwd.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qobjectdefs.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qobjectdefs_impl.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qmap.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qdebug.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qhash.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qtextstream.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qiodevice.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qobject.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qcoreevent.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qscopedpointer.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qobject_impl.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qlocale.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qshareddata.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qvector.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qpoint.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qset.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qcontiguouscache.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qsharedpointer.h \
+		/home/mgabi/IDEs/QT/5.10.1/gcc_64/include/QtCore/qsharedpointer_impl.h \
+		../Lab10QT/Tutorial.h \
+		../Lab10QT/Duration.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o TutorialsModel.o ../Lab10QT/TutorialsModel.cpp
 
 moc_mainwindow.o: moc_mainwindow.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_mainwindow.o moc_mainwindow.cpp
+
+moc_administratorwindow.o: moc_administratorwindow.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_administratorwindow.o moc_administratorwindow.cpp
+
+moc_TutorialsModel.o: moc_TutorialsModel.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_TutorialsModel.o moc_TutorialsModel.cpp
 
 ####### Install
 

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AdministratorWindow</class>
+ <widget class="QWidget" name="AdministratorWindow">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1101</width>
+    <height>420</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Administrator</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <layout class="QVBoxLayout" name="layoutTable">
+     <item>
+      <widget class="QTableView" name="tableCourses"/>
+     </item>
+     <item>
+      <widget class="QPushButton" name="buttonDelete">
+       <property name="text">
+        <string>Delete</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="buttonUpdate">
+       <property name="text">
+        <string>Update</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="0" column="1">
+    <layout class="QFormLayout" name="layoutAdd">
+     <property name="sizeConstraint">
+      <enum>QLayout::SetMaximumSize</enum>
+     </property>
+     <item row="0" column="0">
+      <widget class="QLabel" name="titleLabel">
+       <property name="text">
+        <string>Title</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="titleLineEdit">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="placeholderText">
+        <string>Title</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="presenterLabel">
+       <property name="text">
+        <string>Presenter</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLineEdit" name="presenterLineEdit">
+       <property name="placeholderText">
+        <string>Presenter</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="refLinkLabel">
+       <property name="text">
+        <string>Ref link</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QLineEdit" name="refLinkLineEdit">
+       <property name="placeholderText">
+        <string>Ref link</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="durationLabel">
+       <property name="text">
+        <string>Duration</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QLineEdit" name="durationLineEdit">
+       <property name="placeholderText">
+        <string>Duration (seconds)</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="0">
+      <widget class="QLabel" name="likesLabel">
+       <property name="text">
+        <string>Likes</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="1">
+      <widget class="QLineEdit" name="likesLineEdit">
+       <property name="placeholderText">
+        <string>Likes</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="1">
+      <widget class="QPushButton" name="buttonAdd">
+       <property name="text">
+        <string>Add</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
