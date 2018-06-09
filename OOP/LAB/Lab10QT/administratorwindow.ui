@@ -91,7 +91,7 @@
      <item row="3" column="0">
       <widget class="QLabel" name="durationLabel">
        <property name="text">
-        <string>Duration</string>
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#2e3436;&quot;&gt;Duration&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
       </widget>
      </item>

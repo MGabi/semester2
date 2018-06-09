@@ -1,0 +1,17 @@
+>>> Letter encoding of 'asdasdasdadsadasdfkeooooo'
+a: 10
+d: 01
+e: 1100
+f: 11011
+k: 11010
+o: 00
+s: 111
+
+>>> Original message:
+asdasdasdadsadasdfkeooooo
+
+>>> Encoded message:
+101110110111011011101100111110011011101110111101011000000000000
+
+>>> Decoded message:
+asdasdasdadsadasdfkeooooo

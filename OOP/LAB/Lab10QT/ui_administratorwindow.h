@@ -153,7 +153,7 @@ public:
         presenterLineEdit->setPlaceholderText(QApplication::translate("AdministratorWindow", "Presenter", nullptr));
         refLinkLabel->setText(QApplication::translate("AdministratorWindow", "Ref link", nullptr));
         refLinkLineEdit->setPlaceholderText(QApplication::translate("AdministratorWindow", "Ref link", nullptr));
-        durationLabel->setText(QApplication::translate("AdministratorWindow", "Duration", nullptr));
+        durationLabel->setText(QApplication::translate("AdministratorWindow", "<html><head/><body><p><span style=\" color:#2e3436;\">Duration</span></p></body></html>", nullptr));
         durationLineEdit->setPlaceholderText(QApplication::translate("AdministratorWindow", "Duration (seconds)", nullptr));
         likesLabel->setText(QApplication::translate("AdministratorWindow", "Likes", nullptr));
         likesLineEdit->setPlaceholderText(QApplication::translate("AdministratorWindow", "Likes", nullptr));
