@@ -8,3 +8,9 @@
 **GRAPHS**
 - Labwork #1
 - Labwork #2
+
+**OS**
+- Labworks & practical tests
+
+**SDA**
+- Huffman Encoding/Decoding project
