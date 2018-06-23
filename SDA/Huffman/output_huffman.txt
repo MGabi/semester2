@@ -1,15 +1,15 @@
->>> Letter encoding of 'abdeffffffffffff'
+>>> Letter encoding of 'iadiiiiiiiiiiiiiieasssss'
 a: 001
-b: 000
-d: 011
-e: 010
-f: 1
+d: 0001
+e: 0000
+i: 1
+s: 01
 
 >>> Original message:
-abdeffffffffffff
+iadiiiiiiiiiiiiiieasssss
 
 >>> Encoded message:
-001000011010111111111111
+100100011111111111111100000010101010101
 
 >>> Decoded message:
-abdeffffffffffff
+iadiiiiiiiiiiiiiieasssss
